@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+  .width-auto {
+    @apply w-[95%] mx-auto;
+  }
+  .width-auto-mobile {
+    @apply w-[96%] mx-auto;
+  }
+
+  .base-color {
+    @apply bg-orange-600;
+  }
+  .search-color {
+    @apply bg-orange-400;
+  }
+}
+
+@layer utilities {
+  .cart-hover:hover + div {
+    transform: rotateY(360deg);
+    transition: .8s;
+  }
+}
