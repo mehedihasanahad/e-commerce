@@ -1,18 +1,37 @@
 <!doctype html>
 <html>
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>@yield('title', 'E-commerce')</title>
- 
+  {{-- tailwind --}}
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+  {{-- font-awesome --}}
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/brands.min.css" integrity="sha512-nS1/hdh2b0U8SeA8tlo7QblY6rY6C+MgkZIeRzJQQvMsFfMQFUKp+cgMN2Uuy+OtbQ4RoLMIlO2iF7bIEY3Oyg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/solid.min.css" integrity="sha512-EvFBzDO3WBynQTyPJI+wLCiV0DFXzOazn6aoy/bGjuIhGCZFh8ObhV/nVgDgL0HZYC34D89REh6DOfeJEWMwgg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
+  {{-- animate on scroll --}}
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  {{-- tom-select --}}
+  <link href="https://cdn.jsdelivr.net/npm/tom-select@2.1.0/dist/css/tom-select.css" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: self-font-regular;
+      src: url('{{asset("fonts/Noto_Sans/NotoSans-Regular.ttf")}}');
+    }
+    @font-face {
+      font-family: self-font-medium;
+      src: url('{{asset("fonts/Noto_Sans/NotoSans-Medium.ttf")}}');
+    }
+    @font-face {
+      font-family: self-font-thin;
+      src: url('{{asset("fonts/Noto_Sans/NotoSans-Thin.ttf")}}');
+    }
+  </style>
   @stack('style')
 </head>
-  <body class="bg-gray-200">
+  <body class="bg-gray-200 font-[self-font-regular]">
     {{-- header first --}}
     <div class="h-12 bg-gray-800">
       <div class="width-auto-mobile sm:width-auto text-white"></div>
@@ -211,6 +230,33 @@
         </div>
       </div>
     </div>
+    {{-- animation to scroll --}}
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    {{-- tom-select --}}
+    <script src="https://cdn.jsdelivr.net/npm/tom-select@2.1.0/dist/js/tom-select.complete.min.js"></script>
     @stack('script')
+    <script>
+      AOS.init({
+        // Global settings:
+        disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+        startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+        initClassName: 'aos-init', // class applied after initialization
+        animatedClassName: 'aos-animate', // class applied on animation
+        useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+        disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+        debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+        throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+        
+
+        // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+        offset: 120, // offset (in px) from the original trigger point
+        delay: 0, // values from 0 to 3000, with step 50ms
+        duration: 800, // values from 0 to 3000, with step 50ms
+        easing: 'ease', // default easing for AOS animations
+        once: false, // whether animation should happen only once - while scrolling down
+        mirror: false, // whether elements should animate out while scrolling past them
+        anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+      });
+    </script>
   </body>
 </html>

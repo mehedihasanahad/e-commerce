@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $title = 'E-commerce';
     return view('pages/landing');
-});
+})->name('home');
+
+Route::get('/category', function(Request $request) {
+    return view('pages/category');
+})->name('category');

@@ -3,8 +3,6 @@
 @push('style')
     {{-- swiper slider --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
-    {{-- animate on scroll --}}
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     {{-- extra css for swiper --}}
     <style>
         .swiper-pagination-bullet-active {
@@ -106,7 +104,7 @@
         </div>
         <div id="products" class="mt-4 grid grid-cols-8 gap-3">
             @for ($i = 0; $i < 16; $i++)
-                <a href="#" class="hover:text-orange-600">
+                <a href="{{route('category')}}" class="hover:text-orange-600">
                     <div id="cat-card" class="bg-white rounded-lg drop-shadow-md p-2">
                         <div id="product-img" class="flex justify-center">
                             <img class="h-[100px] w-[100px] object-contain" src="https://www.startech.com.bd/image/cache/catalog/mouse/razer/deathadder-essetial/deathadder-essential-228x228.jpg" alt="product image">
@@ -125,14 +123,21 @@
         </div>
         <div id="products" class="mt-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
             @for ($i = 0; $i < 10; $i++)
-                <div id="card" class="bg-white rounded-lg drop-shadow-md">
+                <div id="card" class="bg-white rounded-lg drop-shadow-md relative">
+                    <div id="save-tag" class="absolute top-2 right-2 bg-orange-600 text-[0.625rem]
+                    text-white py-1 px-2 rounded-full font-[self-font-regular]">
+                        Save: 1000৳
+                    </div>
                     <div id="product-img" class="flex justify-center">
                         <img class="h-[230px] w-[230px] object-contain" src="https://www.startech.com.bd/image/cache/catalog/mouse/razer/deathadder-essetial/deathadder-essential-228x228.jpg" alt="product image">
                     </div>
                     <div class="h-[2px] bg-slate-100 mt-4"></div>
                     <div id="namePrice" class="p-4">
-                        <h1 class=" text-base"><a href="#" class="hover:text-orange-700 hover:underline">Razer DeathAdder Essential Gaming Mouse</a></h1>
-                        <div class="text-base font-bold mt-6 text-orange-700">1,699 <span class=" text-2xl">৳</span></div>
+                        <h1 class=" text-base"><a href="#" class="hover:text-orange-600 hover:underline">Razer DeathAdder Essential Gaming Mouse</a></h1>
+                        <div id="product-price" class="flex gap-x-4 mt-6 font-semibold">
+                            <div class="text-orange-600">1,699৳</div>
+                            <div class="text-gray-400 line-through decoration-[1.2px] font-[self-font-thin]">2,000৳</div>
+                        </div>
                     </div>
                 </div>
             @endfor
@@ -148,14 +153,21 @@
         </div>
         <div id="products" class="mt-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
             @for ($i = 0; $i < 10; $i++)
-                <div id="card" class="bg-white rounded-lg drop-shadow-md">
+                <div id="card" class="bg-white rounded-lg drop-shadow-md relative">
+                    <div id="save-tag" class="absolute top-2 right-2 bg-orange-600 text-[0.625rem]
+                    text-white py-1 px-2 rounded-full font-[self-font-regular]">
+                        Save: 1000৳
+                    </div>
                     <div id="product-img" class="flex justify-center">
                         <img class="h-[230px] w-[230px] object-contain" src="https://www.startech.com.bd/image/cache/catalog/mouse/razer/deathadder-essetial/deathadder-essential-228x228.jpg" alt="product image">
                     </div>
                     <div class="h-[2px] bg-slate-100 mt-4"></div>
                     <div id="namePrice" class="p-4">
-                        <h1 class=" text-base"><a href="#" class="hover:text-orange-700 hover:underline">Razer DeathAdder Essential Gaming Mouse</a></h1>
-                        <div class="text-base font-bold mt-6 text-orange-700">1,699 <span class=" text-2xl">৳</span></div>
+                        <h1 class=" text-base"><a href="#" class="hover:text-orange-600 hover:underline">Razer DeathAdder Essential Gaming Mouse</a></h1>
+                        <div id="product-price" class="flex gap-x-4 mt-6 font-semibold">
+                            <div class="text-orange-600">1,699৳</div>
+                            <div class="text-gray-400 line-through decoration-[1.2px] font-[self-font-thin]">2,000৳</div>
+                        </div>
                     </div>
                 </div>
             @endfor
@@ -209,7 +221,6 @@
 
 @push('script')
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
     const swiper = new Swiper(".swiper", {
         slidesPerView: 1,
@@ -224,28 +235,6 @@
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
-    });
-
-    AOS.init({
-        // Global settings:
-        disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-        startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
-        initClassName: 'aos-init', // class applied after initialization
-        animatedClassName: 'aos-animate', // class applied on animation
-        useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
-        disableMutationObserver: false, // disables automatic mutations' detections (advanced)
-        debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
-        throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
-        
-
-        // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-        offset: 120, // offset (in px) from the original trigger point
-        delay: 0, // values from 0 to 3000, with step 50ms
-        duration: 800, // values from 0 to 3000, with step 50ms
-        easing: 'ease', // default easing for AOS animations
-        once: false, // whether animation should happen only once - while scrolling down
-        mirror: false, // whether elements should animate out while scrolling past them
-        anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
     });
 </script>
 @endpush
