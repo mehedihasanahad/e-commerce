@@ -1,7 +1,7 @@
-## E-commerce Laravel project
-# Installation guide
+# E-commerce Laravel project
+## Installation guide
 - `composer update/install`
 - `npm install`
-# Run command
+## Run command
 - `php artisan serve`
 - `npm run watch`
