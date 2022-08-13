@@ -12,6 +12,6 @@ use Illuminate\Http\Request;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function(Request $request) {
-    return 'fine';
-});
+Route::get('/{name}', function ($name) {
+    return view('admin.index');
+})->where('name','.*');
