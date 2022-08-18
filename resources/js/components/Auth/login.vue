@@ -19,7 +19,7 @@
                 </div>
                 <div class="mt-4">
                     <label for="password" class="text-sm font-semibold text-gray-500">Your password</label>
-                    <input type="password" id="email" class="block mt-1 p-2 text-sm w-full rounded border outline-none
+                    <input type="password" id="password" class="block mt-1 p-2 text-sm w-full rounded border outline-none
                      border-slate-300 focus:border-orange-400 invalid:border-red-600" placeholder="Your Password"
                      title="Password must be at least 6 characters long"  
                      pattern=".{6,}" required>
@@ -32,9 +32,11 @@
                     </label>
                 </div>                    
                 <div class="mt-6">
-                    <button class="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-blue-500 rounded hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
-                        Login
-                    </button>
+                    <router-link to="/dashboard">
+                        <button class="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-blue-500 rounded hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
+                            Login
+                        </button>
+                    </router-link>
                 </div>
             </form>
         </div>
