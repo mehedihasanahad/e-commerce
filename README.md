@@ -5,3 +5,6 @@
 ## Run command
 - `php artisan serve`
 - `npm run watch`
+## env
+- `cp .env.example .env`
+- `php artisan key:generate`

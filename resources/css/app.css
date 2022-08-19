@@ -30,4 +30,8 @@
     transform: rotateY(360deg);
     transition: .8s;
   }
+  .position-left {
+    left: -290px;
+    transition: all 200ms linear;
+  }
 }

@@ -5387,7 +5387,48 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      leftbar: true
+    };
+  },
+  mounted: function mounted() {
+    window.onresize = function () {// console.log(window.innerWidth);
+      // if (window.innerWidth <= 760) {
+      //     console.log(this.$refs.leftBar);
+      // }
+    };
+  },
+  methods: {
+    classToggle: function classToggle() {
+      this.$refs.leftBar.classList.toggle('md:-ml-[290px]');
+
+      if (this.$refs.leftBar.classList.contains("-left-[290px]")) {
+        // show leftbar
+        this.$refs.leftBar.classList.remove('-left-[290px]');
+        this.$refs.leftBar.classList.add('left-0'); // show close bg
+
+        this.$refs.leftbarBg.classList.remove('hidden');
+        this.$refs.leftbarBg.classList.add('block');
+      } else {
+        // hide leftbar
+        this.$refs.leftBar.classList.remove('left-0');
+        this.$refs.leftBar.classList.add('-left-[290px]'); // hide left bg
+
+        this.$refs.leftbarBg.classList.remove('block');
+        this.$refs.leftbarBg.classList.add('hidden');
+      }
+    }
+  }
+});
 
 /***/ }),
 
@@ -28596,22 +28637,57 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { attrs: { id: "layout" } }, [
+    _c(
+      "div",
+      { staticClass: "relative flex min-h-screen", attrs: { id: "wrapper" } },
+      [
+        _c("div", {
+          ref: "leftbarBg",
+          staticClass: "absolute inset-0 bg-slate-300/50 hidden md:hidden",
+          on: { click: _vm.classToggle },
+        }),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            ref: "leftBar",
+            staticClass:
+              "absolute -left-[290px] z-10 min-h-screen md:static w-[290px] bg-green-500 ease-linear duration-200",
+            attrs: { id: "left-bar" },
+          },
+          [
+            _vm._v(
+              "\nasdfaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software\n            "
+            ),
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass: "bg-yellow-500 w-full",
+            attrs: { id: "right-section" },
+          },
+          [
+            _vm._v(
+              "\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software\n"
+            ),
+            _c(
+              "button",
+              {
+                staticClass: "bg-black text-white",
+                on: { click: _vm.classToggle },
+              },
+              [_vm._v("click")]
+            ),
+          ]
+        ),
+      ]
+    ),
+  ])
 }
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { attrs: { id: "layout" } }, [
-      _c(
-        "div",
-        { staticClass: "h-8 bg-slate-500 px-4", attrs: { id: "header" } },
-        [_vm._v("\n        dfc\n    ")]
-      ),
-    ])
-  },
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
