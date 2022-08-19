@@ -1,6 +1,6 @@
-import Login from './components/Auth/login.vue';
-import Dashboard from './components/pages/dashboard.vue';
-import Layout from './components/layout';
+import Login from './pages/Auth/login.vue';
+import Dashboard from './pages/dashboard.vue';
+import Layout from './layout';
 const routes = [
   {
     path: '/login',

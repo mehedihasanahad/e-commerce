@@ -34,4 +34,33 @@
     left: -290px;
     transition: all 200ms linear;
   }
+  /* admin leftbar */
+  .leftbar-height {
+    height: calc(100vh - 3rem)
+  }
+  
+
+  /* left side bar scrollbar style */
+  /* width */
+  .left-scrollbar::-webkit-scrollbar {
+    display: none;
+    width: 10px;
+  }
+  .left-scrollbar:hover::-webkit-scrollbar {
+    display: block;
+  }
+  .left-scrollbar::-webkit-scrollbar-track {
+    background: #475569; 
+  }
+ 
+  /* Handle */
+  .left-scrollbar::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(255 255 255/0.4); 
+  }
+
+  /* Handle on hover */
+  /* .left-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3); 
+  } */
 }
