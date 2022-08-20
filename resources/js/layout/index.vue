@@ -8,7 +8,7 @@
                 <div id="leftbar-header" class="h-12 bg-yellow-600">
                     asdfasdf
                 </div>
-                <div id="leftbar-list" class="left-scrollbar leftbar-height overflow-auto">
+                <div id="leftbar-list" class="left-scrollbar leftbar-height overflow-auto bg-gray-700">
                     <LeftSideBar/>
                 </div>
             </div>
