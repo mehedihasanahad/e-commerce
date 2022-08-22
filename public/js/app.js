@@ -5325,6 +5325,60 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
@@ -5365,17 +5419,29 @@ __webpack_require__.r(__webpack_exports__);
 //
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: {
-    title: String,
+    titleId: String,
     desId: String,
     desHeight: String
   },
+  data: function data() {
+    return {
+      styleFlag: true
+    };
+  },
   methods: {
     toggleList: function toggleList() {
-      var btn = document.getElementById(this.title);
+      var btn = document.getElementById(this.titleId);
       var area = document.getElementById(this.desId);
       btn.classList.toggle('!bg-slate-400');
-      btn.childNodes[1].classList.toggle('rotate-90');
-      area.classList.toggle("!h-[".concat(this.desHeight, "px]"));
+      btn.childNodes[2].classList.toggle('rotate-90'); // handle dropdown animated list
+
+      if (this.styleFlag) {
+        area.style.height = this.desHeight + 'px';
+      } else {
+        area.style.height = '0px';
+      }
+
+      this.styleFlag = !this.styleFlag;
     }
   }
 });
@@ -28725,29 +28791,144 @@ var render = function () {
     "div",
     [
       _c(
+        "h1",
+        { staticClass: "text-gray-300 text-xs uppercase mt-2 mb-1 px-3" },
+        [_vm._v("Application")]
+      ),
+      _vm._v(" "),
+      _vm._m(0),
+      _vm._v(" "),
+      _c(
         "ListItem",
-        { attrs: { title: "titleOne", desId: "desOne", desHeight: "200" } },
+        {
+          staticClass: "mb-2",
+          attrs: { titleId: "titleOne", desId: "desOne", desHeight: "150" },
+        },
         [
-          _vm._v(
-            "\n        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\n    "
-          ),
+          _c("div", { attrs: { slot: "title" }, slot: "title" }, [
+            _c("i", { staticClass: "fa-solid fa-layer-group" }),
+            _vm._v("\n            Catalog\n        "),
+          ]),
+          _vm._v(" "),
+          _c("div", { attrs: { slot: "list" }, slot: "list" }, [
+            _c(
+              "ul",
+              {
+                staticClass:
+                  "list-inside mt-2 child:px-3 child-hover:hover:bg-slate-400 child:mb-2 text-white child:cursor-pointer",
+              },
+              [
+                _c("li", [_vm._v("Products List")]),
+                _vm._v(" "),
+                _c("li", [_vm._v("Product")]),
+                _vm._v(" "),
+                _c("li", [_vm._v("Categories List")]),
+                _vm._v(" "),
+                _c("li", [_vm._v("Category")]),
+              ]
+            ),
+          ]),
         ]
       ),
       _vm._v(" "),
       _c(
         "ListItem",
-        { attrs: { title: "titleTwo", desId: "desTwo", desHeight: "200" } },
+        {
+          staticClass: "mb-2",
+          attrs: { titleId: "titleTwo", desId: "desTwo", desHeight: "50" },
+        },
         [
-          _vm._v(
-            "\n        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\n    "
-          ),
+          _c("div", { attrs: { slot: "title" }, slot: "title" }, [
+            _c("i", { staticClass: "fa-brands fa-opencart" }),
+            _vm._v("\n            Orders\n        "),
+          ]),
+          _vm._v(" "),
+          _c("div", { attrs: { slot: "list" }, slot: "list" }, [
+            _c(
+              "ul",
+              {
+                staticClass:
+                  "list-inside mt-2 child:px-3 child-hover:hover:bg-slate-400 child:mb-2 text-white child:cursor-pointer",
+              },
+              [_c("li", [_vm._v("Orders List")])]
+            ),
+          ]),
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "ListItem",
+        {
+          staticClass: "mb-2",
+          attrs: { titleId: "titleThree", desId: "desThree", desHeight: "50" },
+        },
+        [
+          _c("div", { attrs: { slot: "title" }, slot: "title" }, [
+            _c("i", { staticClass: "fa-solid fa-user-large" }),
+            _vm._v("\n            Customers\n        "),
+          ]),
+          _vm._v(" "),
+          _c("div", { attrs: { slot: "list" }, slot: "list" }, [
+            _c(
+              "ul",
+              {
+                staticClass:
+                  "list-inside mt-2 child:px-3 child-hover:hover:bg-slate-400 child:mb-2 text-white child:cursor-pointer",
+              },
+              [_c("li", [_vm._v("Customers List")])]
+            ),
+          ]),
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "ListItem",
+        {
+          staticClass: "mb-2",
+          attrs: { titleId: "titleFour", desId: "desFour", desHeight: "50" },
+        },
+        [
+          _c("div", { attrs: { slot: "title" }, slot: "title" }, [
+            _c("i", { staticClass: "fa-solid fa-bullhorn" }),
+            _vm._v("\n            Marketing\n        "),
+          ]),
+          _vm._v(" "),
+          _c("div", { attrs: { slot: "list" }, slot: "list" }, [
+            _c(
+              "ul",
+              {
+                staticClass:
+                  "list-inside mt-2 child:px-3 child-hover:hover:bg-slate-400 child:mb-2 text-white child:cursor-pointer",
+              },
+              [_c("li", [_vm._v("Coupons List")])]
+            ),
+          ]),
         ]
       ),
     ],
     1
   )
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "mb-2 text-white cursor-pointer flex items-center h-8 px-3 bg-slate-500 hover:bg-slate-400",
+      },
+      [
+        _c("div", [
+          _c("i", { staticClass: "fa-solid fa-gauge-high" }),
+          _vm._v("\n            Dashboard\n        "),
+        ]),
+      ]
+    )
+  },
+]
 render._withStripped = true
 
 
@@ -28771,29 +28952,30 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "list" }, [
-    _c("div", { staticClass: "mb-2", attrs: { id: "navOne" } }, [
+    _c("div", { attrs: { id: "navOne" } }, [
       _c(
         "div",
         {
           staticClass:
             "text-white cursor-pointer flex justify-between items-center h-8 px-3 bg-slate-500 hover:bg-slate-400",
-          attrs: { id: _vm.title },
+          attrs: { id: _vm.titleId },
           on: {
             click: function ($event) {
               return _vm.toggleList()
             },
           },
         },
-        [_vm._v("\n            header 1\n            "), _vm._m(0)]
+        [_vm._t("title"), _vm._v(" "), _vm._m(0)],
+        2
       ),
       _vm._v(" "),
       _c(
         "div",
         {
-          staticClass: "duration-200 px-3 h-0 overflow-hidden",
+          staticClass: "duration-200 h-0 overflow-hidden",
           attrs: { id: _vm.desId },
         },
-        [_vm._t("default")],
+        [_vm._t("list")],
         2
       ),
     ]),
