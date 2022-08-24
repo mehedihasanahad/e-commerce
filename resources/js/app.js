@@ -27,7 +27,8 @@ import routes from './router.js';
 const router = new VueRouter({
   routes,
   mode: 'history',
-  base:'admin'
+  base:'admin',
+  linkActiveClass: 'active',
 })
 
 /**

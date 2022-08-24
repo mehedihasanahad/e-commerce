@@ -13,7 +13,7 @@
                 </div>
             </div>
             <!-- right section -->
-            <div class="bg-slate-300 w-full max-h-screen overflow-auto">
+            <div class="bg-slate-100 w-full max-h-screen overflow-auto">
                 <!-- right section header -->
                 <header class="bg-white h-12  shadow-md px-4 py-1 flex items-center sticky top-0">
                     <button class="hover:bg-slate-300/50 text-lg rounded-sm px-2 py-2 duration-200" 

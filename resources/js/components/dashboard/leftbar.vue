@@ -1,12 +1,11 @@
 <template>
     <div>
         <h1 class="text-gray-300 text-xs uppercase mt-2 mb-1 px-3">Application</h1>
-        <div class="mb-2 text-white cursor-pointer flex items-center h-8 px-3 bg-slate-500 hover:bg-slate-400">
-            <div>
-                <i class="fa-solid fa-gauge-high"></i>
-                Dashboard
-            </div>
-        </div>
+        <router-link to="/dashboard" 
+        class="router-link-style">
+            <i class="fa-solid fa-gauge-high"></i>
+            Dashboard
+        </router-link>
         
         <ListItem class="mb-2" titleId='titleOne' desId='desOne' desHeight='150'>
             <div slot="title">
@@ -14,10 +13,14 @@
                 Catalog
             </div>
             <div slot="list">
-                <ul class="list-inside mt-2 child:px-3 
+                <ul class="list-inside mt-2 child:px-3 child:block
                 child-hover:hover:bg-slate-400 child:mb-2 text-white child:cursor-pointer">
-                    <li>Products List</li>
-                    <li>Product</li>
+                    <router-link to="/category">
+                        Products List
+                    </router-link>
+                    <router-link to="/product">
+                        Product
+                    </router-link>
                     <li>Categories List</li>
                     <li>Category</li>
                 </ul>
