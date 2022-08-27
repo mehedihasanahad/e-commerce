@@ -5686,6 +5686,123 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
 /***/ }),
@@ -29998,10 +30115,384 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { attrs: { id: "category" } }, [
-    _vm._v("\n    Categories list\n"),
+    _vm._m(0),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        staticClass: "mt-4 py-2 bg-white shadow-md",
+        attrs: { id: "data-table" },
+      },
+      [
+        _c("div", { staticClass: "search-bar px-2 relative" }, [
+          _c("div", { staticClass: "absolute p-2.5 text-gray-400" }, [
+            _c(
+              "svg",
+              {
+                attrs: {
+                  xmlns: "http://www.w3.org/2000/svg",
+                  width: "1em",
+                  height: "1em",
+                  viewBox: "0 0 16 16",
+                  fill: "currentColor",
+                },
+              },
+              [
+                _c("path", {
+                  attrs: {
+                    d: "M16.243 14.828C16.243 14.828 16.047 15.308 15.701 15.654C15.34 16.015 14.828 16.242 14.828 16.242L10.321 11.736C9.247 12.522 7.933 13 6.5 13C2.91 13 0 10.09 0 6.5C0 2.91 2.91 0 6.5 0C10.09 0 13 2.91 13 6.5C13 7.933 12.522 9.247 11.736 10.321L16.243 14.828ZM6.5 2C4.015 2 2 4.015 2 6.5C2 8.985 4.015 11 6.5 11C8.985 11 11 8.985 11 6.5C11 4.015 8.985 2 6.5 2Z",
+                  },
+                }),
+              ]
+            ),
+          ]),
+          _vm._v(" "),
+          _c("input", {
+            staticClass:
+              "w-full pl-8 pr-2 py-2 text-sm border border-slate-300 rounded focus:outline-none focus:shadow-blue-200 focus:shadow-inner",
+            attrs: { type: "text", placeholder: "search" },
+          }),
+        ]),
+        _vm._v(" "),
+        _vm._m(1),
+        _vm._v(" "),
+        _vm._m(2),
+      ]
+    ),
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "flex justify-between" }, [
+      _c("h1", { staticClass: "font-bold text-2xl" }, [_vm._v("Category")]),
+      _vm._v(" "),
+      _c(
+        "button",
+        {
+          staticClass:
+            "bg-yellow-400 text-sm font-bold py-1.5 px-2 active:shadow-lg hover:bg-yellow-300",
+        },
+        [_vm._v("New Category")]
+      ),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "overflow-x-auto relative mt-2" }, [
+      _c(
+        "table",
+        {
+          staticClass:
+            "w-full text-sm text-left text-gray-500 dark:text-gray-400",
+        },
+        [
+          _c(
+            "thead",
+            {
+              staticClass:
+                "text-xs text-gray-700 uppercase bg-sky-100 dark:bg-gray-700 dark:text-gray-400",
+            },
+            [
+              _c("tr", [
+                _c(
+                  "th",
+                  { staticClass: "py-3 px-6", attrs: { scope: "col" } },
+                  [
+                    _vm._v(
+                      "\n                            Product name\n                        "
+                    ),
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "th",
+                  { staticClass: "py-3 px-6", attrs: { scope: "col" } },
+                  [
+                    _vm._v(
+                      "\n                            Color\n                        "
+                    ),
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "th",
+                  { staticClass: "py-3 px-6", attrs: { scope: "col" } },
+                  [
+                    _vm._v(
+                      "\n                            Category\n                        "
+                    ),
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "th",
+                  { staticClass: "py-3 px-6", attrs: { scope: "col" } },
+                  [
+                    _vm._v(
+                      "\n                            Price\n                        "
+                    ),
+                  ]
+                ),
+              ]),
+            ]
+          ),
+          _vm._v(" "),
+          _c("tbody", [
+            _c(
+              "tr",
+              {
+                staticClass:
+                  "bg-white border-b dark:bg-gray-800 dark:border-gray-700",
+              },
+              [
+                _c(
+                  "th",
+                  {
+                    staticClass:
+                      "py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white",
+                    attrs: { scope: "row" },
+                  },
+                  [
+                    _vm._v(
+                      '\n                            Apple MacBook Pro 17"\n                        '
+                    ),
+                  ]
+                ),
+                _vm._v(" "),
+                _c("td", { staticClass: "py-4 px-6" }, [
+                  _vm._v(
+                    "\n                            Sliver\n                        "
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("td", { staticClass: "py-4 px-6" }, [
+                  _vm._v(
+                    "\n                            Laptop\n                        "
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("td", { staticClass: "py-4 px-6" }, [
+                  _vm._v(
+                    "\n                            $2999\n                        "
+                  ),
+                ]),
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "tr",
+              {
+                staticClass:
+                  "bg-white border-b dark:bg-gray-800 dark:border-gray-700",
+              },
+              [
+                _c(
+                  "th",
+                  {
+                    staticClass:
+                      "py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white",
+                    attrs: { scope: "row" },
+                  },
+                  [
+                    _vm._v(
+                      "\n                            Microsoft Surface Pro\n                        "
+                    ),
+                  ]
+                ),
+                _vm._v(" "),
+                _c("td", { staticClass: "py-4 px-6" }, [
+                  _vm._v(
+                    "\n                            White\n                        "
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("td", { staticClass: "py-4 px-6" }, [
+                  _vm._v(
+                    "\n                            Laptop PC\n                        "
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("td", { staticClass: "py-4 px-6" }, [
+                  _vm._v(
+                    "\n                            $1999\n                        "
+                  ),
+                ]),
+              ]
+            ),
+            _vm._v(" "),
+            _c("tr", { staticClass: "bg-white border-b dark:bg-gray-800" }, [
+              _c(
+                "th",
+                {
+                  staticClass:
+                    "py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white",
+                  attrs: { scope: "row" },
+                },
+                [
+                  _vm._v(
+                    "\n                            Magic Mouse 2\n                        "
+                  ),
+                ]
+              ),
+              _vm._v(" "),
+              _c("td", { staticClass: "py-4 px-6" }, [
+                _vm._v(
+                  "\n                            Black\n                        "
+                ),
+              ]),
+              _vm._v(" "),
+              _c("td", { staticClass: "py-4 px-6" }, [
+                _vm._v(
+                  "\n                            Accessories\n                        "
+                ),
+              ]),
+              _vm._v(" "),
+              _c("td", { staticClass: "py-4 px-6" }, [
+                _vm._v(
+                  "\n                            $99\n                        "
+                ),
+              ]),
+            ]),
+          ]),
+        ]
+      ),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "mt-4 mb-2 px-2 flex flex-col items-center gap-y-3 lg:flex-row lg:justify-between",
+      },
+      [
+        _c("nav", { attrs: { "aria-label": "Page navigation example" } }, [
+          _c("ul", { staticClass: "inline-flex -space-x-px" }, [
+            _c("li", [
+              _c(
+                "a",
+                {
+                  staticClass:
+                    "py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white",
+                  attrs: { href: "#" },
+                },
+                [_vm._v("Previous")]
+              ),
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c(
+                "a",
+                {
+                  staticClass:
+                    "py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white",
+                  attrs: { href: "#" },
+                },
+                [_vm._v("1")]
+              ),
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c(
+                "a",
+                {
+                  staticClass:
+                    "py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white",
+                  attrs: { href: "#" },
+                },
+                [_vm._v("2")]
+              ),
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c(
+                "a",
+                {
+                  staticClass:
+                    "py-2 px-3 text-blue-600 bg-blue-50 border border-gray-300 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white",
+                  attrs: { href: "#", "aria-current": "page" },
+                },
+                [_vm._v("3")]
+              ),
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c(
+                "a",
+                {
+                  staticClass:
+                    "py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white",
+                  attrs: { href: "#" },
+                },
+                [_vm._v("4")]
+              ),
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c(
+                "a",
+                {
+                  staticClass:
+                    "py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white",
+                  attrs: { href: "#" },
+                },
+                [_vm._v("5")]
+              ),
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c(
+                "a",
+                {
+                  staticClass:
+                    "py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white",
+                  attrs: { href: "#" },
+                },
+                [_vm._v("Next")]
+              ),
+            ]),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "flex gap-x-3" }, [
+          _c("p", [_vm._v("Showing 11 to 13 of 13")]),
+          _vm._v(" "),
+          _c("label", [_vm._v("/")]),
+          _vm._v(" \n                Rows per page\n                "),
+          _c(
+            "select",
+            {
+              staticClass:
+                "bg-gray-50 border border-gray-300 outline-none text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500",
+              attrs: { id: "countries" },
+            },
+            [
+              _c("option", { attrs: { value: "16" } }, [_vm._v("16")]),
+              _vm._v(" "),
+              _c("option", { attrs: { value: "25", selected: "" } }, [
+                _vm._v("25"),
+              ]),
+              _vm._v(" "),
+              _c("option", { attrs: { value: "50" } }, [_vm._v("50")]),
+              _vm._v(" "),
+              _c("option", { attrs: { value: "75" } }, [_vm._v("75")]),
+              _vm._v(" "),
+              _c("option", { attrs: { value: "100" } }, [_vm._v("100")]),
+            ]
+          ),
+        ]),
+      ]
+    )
+  },
+]
 render._withStripped = true
 
 
