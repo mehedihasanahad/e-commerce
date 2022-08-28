@@ -1,7 +1,8 @@
 import Login from './pages/Auth/login.vue';
 import Dashboard from './pages/dashboard.vue';
-import Category from './pages/category.vue';
-import Product from './pages/product.vue';
+import Category from './pages/catalog/category.vue';
+import categoryCreate from './pages/catalog/CategoryCreate.vue';
+import Product from './pages/catalog/product.vue';
 import Layout from './layout';
 const routes = [
   {
@@ -29,7 +30,13 @@ const routes = [
         path: 'product',
         name: 'layout.product', 
         component: Product
-      },  
+      },
+      {
+        path: 'category/create',
+        name: 'layout.categoryCreate', 
+        component: categoryCreate
+      },
+
     ]
   },
 ]

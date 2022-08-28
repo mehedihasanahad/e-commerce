@@ -2,7 +2,7 @@
     <div id="category">
         <div class="flex justify-between">
             <h1 class="font-bold text-2xl">Category</h1>
-            <button class="bg-yellow-400 text-sm font-bold py-1.5 px-2 active:shadow-lg hover:bg-yellow-300">New Category</button>
+            <router-link to="/category/create" class="bg-yellow-400 text-sm font-bold py-1.5 px-2 active:shadow-lg hover:bg-yellow-300">New Category</router-link>
         </div>
 
         <div id="data-table" class="mt-4 py-2 bg-white shadow-md">
