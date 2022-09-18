@@ -44287,7 +44287,7 @@ var render = function () {
     "div",
     {
       staticClass:
-        "bg-[url('/admin/bg-body.png')] bg-no-repeat bg-contain min-h-screen bg-gray-200 flex justify-center items-center",
+        "bg-[url('/admin_resource/bg-body.png')] bg-no-repeat bg-contain min-h-screen bg-gray-200 flex justify-center items-center",
     },
     [
       _c(
@@ -44345,7 +44345,7 @@ var staticRenderFns = [
         _c("a", { attrs: { href: "#" } }, [
           _c("img", {
             staticClass: "w-14 h-14 mx-auto mb-2",
-            attrs: { src: "/admin/shopping-bag.svg", alt: "" },
+            attrs: { src: "/admin_resource/shopping-bag.svg", alt: "" },
           }),
         ]),
         _vm._v(" "),

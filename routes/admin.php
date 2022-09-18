@@ -16,3 +16,5 @@ use Illuminate\Http\Request;
 Route::get('/{name}', function ($name) {
     return view('admin.index');
 })->where('name','.*');
+
+Route::redirect('/', '/admin/login');
