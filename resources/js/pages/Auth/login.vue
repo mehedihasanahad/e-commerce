@@ -1,10 +1,10 @@
 <template>
-    <div class="bg-[url('/admin/bg-body.png')] 
+    <div class="bg-[url('/admin_resource/bg-body.png')] 
     bg-no-repeat bg-contain 
     min-h-screen bg-gray-200 flex justify-center items-center">
         <div class="w-full  m-auto bg-white dark:bg-slate-800/60 rounded shadow-lg ring-2 ring-slate-300/50 dark:ring-slate-700/50 lg:max-w-md">
             <div class="text-center px-6 bg-slate-900 rounded-t py-8">
-                <a href="#"><img src="/admin/shopping-bag.svg" alt="" class="w-14 h-14 mx-auto mb-2"></a>
+                <a href="#"><img src="/admin_resource/shopping-bag.svg" alt="" class="w-14 h-14 mx-auto mb-2"></a>
                 <h3 class="font-semibold text-white text-xl mb-1">Let's Get Started E-BD</h3>
                 <p class="text-xs text-slate-400">Sign in to continue to E-BD.</p>
             </div>
