@@ -16,7 +16,7 @@
             <div class="bg-slate-100 w-full max-h-screen overflow-auto">
                 <!-- right section header -->
                 <header class="bg-white h-12  shadow-md px-4 py-1 flex items-center sticky top-0 z-10">
-                    <button class="hover:bg-slate-300/50 text-lg rounded-sm px-2 py-2 duration-200" 
+                    <button class="hover:bg-slate-300/50 text-lg rounded-sm px-2 py-2 duration-200"
                     @click="classToggle">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M1,11V9h18v2H1z M1,3h18v2H1V3z M15,17H1v-2h14V17z"></path></svg>
                     </button>
@@ -42,7 +42,14 @@ export default {
             leftbar: true,
         }
     },
-    mounted() {},
+    mounted() {
+        const token = sessionStorage.getItem('Authorization');
+        const rememberToken = this.$cookies.get('rememberToken');
+        // validateToken return a Promise
+        commonFunction.validateToken(token, rememberToken).then(resp => {
+            if (resp?.data?.status != 200) this.$router.push('/login');
+        });
+    },
     methods: {
         classToggle() {
             this.$refs.leftBar.classList.toggle('md:-ml-[290px]');
@@ -61,6 +68,9 @@ export default {
                 this.$refs.leftbarBg.classList.remove('block');
                 this.$refs.leftbarBg.classList.add('hidden');
             }
+        },
+        logout() {
+            // upcoming
         }
     }
 }

@@ -15,5 +15,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::prefix('v1')->group(function() {
-    Route::match(['post', 'get'],'{any}', 'ApiController@handle');
+    Route::post('{any}', 'ApiController@handle');
 });

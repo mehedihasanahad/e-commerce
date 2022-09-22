@@ -102,7 +102,7 @@ export default {
         statusChecker(status) {
             if (status == 1) return 'Completed';
             else if (status == 2) return 'Pending';
-            else if (status == 3) return 'Cancel';  
+            else if (status == 3) return 'Cancel';
         }
     },
     mounted() {
