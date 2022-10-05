@@ -45,8 +45,18 @@ Vue.use(Toast, {
 import Chart from 'chart.js/auto';
 window.chart = Chart;
 
+//helper object
 import commonFunction from './helper/commonFunction';
 window.commonFunction = commonFunction;
+
+// select box
+import Multiselect from 'vue-multiselect'
+Vue.component('multiselect', Multiselect)
+
+// select box
+import vSelect from 'vue-select'
+Vue.component('v-select', vSelect)
+import 'vue-select/dist/vue-select.css';
 
 /**
  * The following block of code may be used to automatically register your

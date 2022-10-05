@@ -1,12 +1,12 @@
 <template>
     <div>
         <h1 class="text-gray-300 text-xs uppercase mt-2 mb-1 px-3">Application</h1>
-        <router-link to="/dashboard" 
+        <router-link to="/dashboard"
         class="router-link-style">
             <i class="fa-solid fa-gauge-high"></i>
             Dashboard
         </router-link>
-        
+
         <ListItem class="mb-2" titleId='titleOne' desId='desOne' desHeight='150'>
             <div slot="title">
                 <i class="fa-solid fa-layer-group"></i>
@@ -15,11 +15,8 @@
             <div slot="list">
                 <ul class="list-inside mt-2 child:px-3 child:block
                 child-hover:hover:bg-slate-400 child:mb-2 text-white child:cursor-pointer">
-                    <router-link to="/category">
-                        Products List
-                    </router-link>
                     <router-link to="/product">
-                        Product
+                        Products List
                     </router-link>
                     <li>Categories List</li>
                     <li>Category</li>
@@ -33,7 +30,7 @@
                 Orders
             </div>
             <div slot="list">
-                <ul class="list-inside mt-2 child:px-3 
+                <ul class="list-inside mt-2 child:px-3
                 child-hover:hover:bg-slate-400 child:mb-2 text-white child:cursor-pointer">
                     <li>Orders List</li>
                 </ul>
@@ -45,7 +42,7 @@
                 Customers
             </div>
             <div slot="list">
-                <ul class="list-inside mt-2 child:px-3 
+                <ul class="list-inside mt-2 child:px-3
                 child-hover:hover:bg-slate-400 child:mb-2 text-white child:cursor-pointer">
                     <li>Customers List</li>
                 </ul>
@@ -57,7 +54,7 @@
                 Marketing
             </div>
             <div slot="list">
-                <ul class="list-inside mt-2 child:px-3 
+                <ul class="list-inside mt-2 child:px-3
                 child-hover:hover:bg-slate-400 child:mb-2 text-white child:cursor-pointer">
                     <li>Coupons List</li>
                 </ul>

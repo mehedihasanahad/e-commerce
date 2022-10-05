@@ -11,6 +11,7 @@ module.exports = {
     function ({ addVariant }) {
       addVariant('child', '& > *');
       addVariant('child-hover', '& > *:hover');
+      addVariant('hover-wrapper', '&:hover span');
     }
   ],
 }
