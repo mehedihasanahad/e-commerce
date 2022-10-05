@@ -11,6 +11,10 @@ window.Vue = require('vue').default;
 import VueRouter from 'vue-router';
 Vue.use(VueRouter);
 
+//outside-click
+import vClickOutside from 'v-click-outside'
+Vue.use(vClickOutside)
+
 //Axios
 import apiService from './axios';
 window.APISERVICE = apiService;
