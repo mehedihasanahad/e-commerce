@@ -33,7 +33,12 @@
                 </div>
                 <div class="mt-6">
                     <button class="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-blue-500 rounded hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
-                        Login
+                        <span v-if="!loading">
+                            Login
+                        </span>
+                        <span v-if="loading">
+                            <i class="animate-spin fa-solid fa-circle-notch"></i>
+                        </span>
                     </button>
                 </div>
             </form>
@@ -50,44 +55,52 @@
                 username: '',
                 password: '',
                 remember: false,
+                loading: false,
             }
         },
         mounted() {
             const token = sessionStorage.getItem('Authorization');
             const rememberToken = this.$cookies.get('rememberToken');
             // validateToken return a Promise
-            commonFunction.validateToken(token, rememberToken).then(resp => {
-                if (resp?.data?.status == 200) this.$router.push('/dashboard');
-            });
+            if (rememberToken || token) {
+                commonFunction.validateToken(token, rememberToken).then(resp => {
+                    if (resp?.data?.status == 200) this.$router.push('/dashboard');
+                });
+            }
         },
         methods: {
             async login() {
                 try {
+                    this.loading = true;
                     const formData = commonFunction.formdate({
                         'username': this.username,
                         'password': this.password,
                         'remember': this.remember
                     });
                     const response = await APISERVICE.post('getToken', formData);
-                    const token = response.data?.data?.token;
-                    const tokenType = response.data?.data?.type;
-                    const rememberToken = response.data?.data?.remember_me;
-                    const userInfo = response.data?.data?.userInfo;
+                    if (response) {
+                        this.loading = false;
+                        const token = response.data?.data?.token;
+                        const tokenType = response.data?.data?.type;
+                        const rememberToken = response.data?.data?.remember_me;
+                        const userInfo = response.data?.data?.userInfo;
 
-                    if (!rememberToken && token && userInfo) {
-                        sessionStorage.setItem('Authorization',`${tokenType} ${token}`);
-                        sessionStorage.setItem('userInfo', JSON.stringify(userInfo));
-                        this.$toast.success(`Welcom ${userInfo.first_name}`);
-                        this.$router.push('/dashboard');
-                    } else if(rememberToken) {
-                        this.$cookies.set('rememberToken',`bearer ${rememberToken}`, 60 * 60 * 24 * (365 * 2));
-                        this.$cookies.set('userInfo', userInfo, 60 * 60 * 24 * (365 * 2));
-                        this.$toast.success(`Welcom ${userInfo.first_name}`);
-                        this.$router.push('/dashboard');
-                    } else {
-                        this.$toast.error(`Invalid Credentials`);
+                        if (!rememberToken && token && userInfo) {
+                            sessionStorage.setItem('Authorization',`${tokenType} ${token}`);
+                            sessionStorage.setItem('userInfo', JSON.stringify(userInfo));
+                            this.$toast.success(`Welcom ${userInfo.first_name}`);
+                            this.$router.push('/dashboard');
+                        } else if(rememberToken) {
+                            this.$cookies.set('rememberToken',`bearer ${rememberToken}`, 60 * 60 * 24 * (365 * 2));
+                            this.$cookies.set('userInfo', userInfo, 60 * 60 * 24 * (365 * 2));
+                            this.$toast.success(`Welcom ${userInfo.first_name}`);
+                            this.$router.push('/dashboard');
+                        } else {
+                            this.$toast.error(`Invalid Credentials`);
+                        }
                     }
                 } catch (e) {
+                    this.loading = false;
                     console.log(e)
                     this.$toast.error(`Invalid Credentials`);
                 }
