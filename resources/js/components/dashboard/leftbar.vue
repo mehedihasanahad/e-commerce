@@ -7,7 +7,7 @@
             Dashboard
         </router-link>
 
-        <ListItem class="mb-2" titleId='titleOne' desId='desOne' desHeight='150'>
+        <ListItem class="mb-2" titleId='titleOne' desId='desOne' desHeight='80'>
             <div slot="title">
                 <i class="fa-solid fa-layer-group"></i>
                 Catalog
@@ -18,8 +18,9 @@
                     <router-link to="/product">
                         Products List
                     </router-link>
-                    <li>Categories List</li>
-                    <li>Category</li>
+                    <router-link to="/category">
+                        Categories List
+                    </router-link>
                 </ul>
             </div>
         </ListItem>
