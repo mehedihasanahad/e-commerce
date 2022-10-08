@@ -18,7 +18,7 @@
                     <thead class="text-xs text-gray-700 uppercase bg-sky-100 dark:bg-gray-700 dark:text-gray-400">
                         <tr>
                             <th scope="col" class="py-3 px-6">
-                                Product name
+                                Category name
                             </th>
                             <th scope="col" class="py-3 px-6">
                                 Color
@@ -106,7 +106,7 @@
                 </nav>
                 <div class="flex gap-x-3">
                     <p>Showing 11 to 13 of 13</p>
-                    <label>/</label> 
+                    <label>/</label>
                     Rows per page
                     <select id="countries" class="bg-gray-50 border border-gray-300 outline-none  text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500">
                         <option value="16">16</option>

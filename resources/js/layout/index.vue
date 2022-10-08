@@ -15,7 +15,7 @@
             <!-- right section -->
             <div class="bg-slate-100 w-full max-h-screen overflow-auto">
                 <!-- right section header -->
-                <header class="bg-white h-12 shadow-md pl-4 py-1 flex items-center justify-between sticky top-0 z-10">
+                <header class="bg-white h-12 shadow-md pl-4 py-1 flex items-center justify-between sticky top-0 z-20">
                     <div>
                         <button class="hover:bg-slate-300/50 text-lg rounded-sm px-2 py-2 duration-200"
                                 @click="classToggle">
@@ -73,8 +73,10 @@ export default {
         commonFunction.validateToken(token, rememberToken).then(resp => {
             if (rememberToken) this.userInfo = this.$cookies.get('userInfo');
             else if (token) this.userInfo = JSON.parse(sessionStorage.getItem('userInfo'));
-            console.log(this.userInfo);
             if (resp?.data?.status != 200) this.$router.push('/login');
+        }).catch(e => {
+            console.log(e);
+            this.$router.push('/login');
         });
     },
     methods: {
@@ -101,12 +103,12 @@ export default {
             if (rememberToken) {
                 this.$cookies.remove('rememberToken');
                 this.$cookies.remove('userInfo');
-                this.$router.push('login');
+                this.$router.push('/login');
                 return;
             }
             sessionStorage.removeItem('Authorization');
             sessionStorage.removeItem('userInfo');
-            this.$router.push('login');
+            this.$router.push('/login');
         },
         closeDropDown() {
             this.$refs.profile.classList.toggle('bg-gray-400/20');

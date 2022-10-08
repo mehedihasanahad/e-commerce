@@ -7,6 +7,9 @@
 require('./bootstrap');
 
 window.Vue = require('vue').default;
+import myMixins from './helper/mixin';
+Vue.mixin(myMixins);
+
 // Router
 import VueRouter from 'vue-router';
 Vue.use(VueRouter);
