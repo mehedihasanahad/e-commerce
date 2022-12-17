@@ -2,6 +2,7 @@
 ## Installation guide
 - `composer update/install`
 - `npm install`
+- `php artisan migrate`
 ## Run command
 - `php artisan serve`
 - `npm run watch`
