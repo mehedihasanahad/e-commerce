@@ -14,21 +14,20 @@ class ApiController extends Controller
         try {
             $moduleType = $request->segment(1);
             $routeName = $request->segment(3);
-
-            if ($moduleType == 'api' && $routeName == 'getToken') {
-                $tokenArray = CommonFunction::getToken($request);
-                ResponseController::apiResponse(200, 'Successfully Token Generated', 'Success', $tokenArray);
-            } else if ($moduleType == 'api' && $routeName == 'validateToken') {
-                $response = CommonFunction::validateToken($request);
-                ResponseController::apiResponse(200, 'Token is valid', 'Success', $response);
+            if ($moduleType == 'api') {
+                switch(true) {
+                    case $routeName == 'getToken':
+                        $tokenArray = CommonFunction::getToken($request);
+                        ResponseController::apiResponse(200, 'Successfully Token Generated', 'Success', $tokenArray);
+                        break;
+                    case $routeName == 'validateToken':
+                        $response = CommonFunction::validateToken($request);
+                        ResponseController::apiResponse(200, 'Token is valid', 'Success', $response);
+                        breadk;
+                    default: 
+                        ResponseController::apiResponse(500, 'Invalid API Request', 'Error');
+                }
             }
-
-            // $tokenAccess = $this->checkTokenValid($request->header('Authorization'));
-            // if( !$tokenAccess['status']) {
-            //     ResponseController::apiResponse(401, 'Unauthorized','Error');
-            // }
-            // $this->handleRequest($request);
-            // ResponseController::apiResponse(200, 'Unauthorized','Error', $response);
         } catch (\Exception $e) {
 //            dd('M: '.$e->getMessage().' F: '.$e->getFile().' L: '.$e->getLine());
             ResponseController::apiResponse(500, $e->getMessage(), 'Error');

@@ -1,5 +1,5 @@
 class CommonFunction {
-    static formdate(payload) {
+    static formdata(payload) {
         let formData = new FormData();
         for (const formDataKey in payload) {
             formData.append(formDataKey, payload[formDataKey]);
@@ -9,11 +9,11 @@ class CommonFunction {
     static async validateToken(token, rememberToken) {
         try {
             if (rememberToken) {
-                const formData = this.formdate({'token': rememberToken});
+                const formData = this.formdata({'token': rememberToken});
                 const response = await APISERVICE.post('validateToken', formData);
                 return response;
             } else if (token) {
-                const formData = this.formdate({'token': token});
+                const formData = this.formdata({'token': token});
                 const response = await APISERVICE.post('validateToken', formData);
                 return response;
             }

@@ -29,6 +29,10 @@ class CommonFunction
         $credentils = $validator->validated();
         $remember = $request->input('remember');
         if (Auth::guard('admin')->attempt($credentils)) {
+            if (!Auth::user()) {
+                $user = Admin::where('username', $credentils['username'])->first();
+                Auth::login($user, $remember);
+            }
             $key = config('constant.TOKEN_KEY');
             $payload = [
                 'userId' => $credentils['username'],
@@ -72,6 +76,10 @@ class CommonFunction
             'username' => $decoded->userId,
             'password' => $decoded->regKey
         ])) {
+            if (!Auth::user()) {
+                $user = Admin::where('username', $decoded->userId)->first();
+                Auth::login($user);
+            }
             return [];
         } else {
             ResponseController::apiResponse(400, 'Invalid token', 'Error');
