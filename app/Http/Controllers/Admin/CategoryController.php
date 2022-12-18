@@ -101,6 +101,7 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        ProductCategories::find($id)->delete();
+        ResponseController::apiResponse(200, 'Category deleted', 'Success');
     }
 }

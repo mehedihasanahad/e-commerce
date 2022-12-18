@@ -39,9 +39,8 @@
                         class="text-xs text-gray-700 uppercase bg-sky-100 dark:bg-gray-700 dark:text-gray-400"
                     >
                         <tr>
-                            <th scope="col" class="py-3 px-6">
-                                Category Thumb
-                            </th>
+                            <th scope="col" class="p-3">SL</th>
+                            <th scope="col" class="p-3">Category Thumb</th>
                             <th scope="col" class="py-3 px-6">Category name</th>
                             <th scope="col" class="py-3 px-6">
                                 Category Group
@@ -56,6 +55,7 @@
                             v-for="(category, i) in categories"
                             :key="i"
                         >
+                            <td class="pl-3 font-bold">{{ i + 1 }}</td>
                             <td class="w-[150px]">
                                 <img
                                     v-if="category.image !== null"
@@ -97,12 +97,14 @@
                                 <div class="d-flex space-x-2">
                                     <button>
                                         <i
-                                            class="fa-regular fa-pen-to-square text-blue-400"
+                                            class="fa-regular fa-pen-to-square text-blue-400 text-xl"
                                         ></i>
                                     </button>
-                                    <button>
+                                    <button
+                                        @click="deleteCategory(category.id)"
+                                    >
                                         <i
-                                            class="fa-solid fa-trash text-red-500"
+                                            class="fa-solid fa-trash text-red-500 text-xl"
                                         ></i>
                                     </button>
                                 </div>
@@ -116,6 +118,7 @@
                 class="mt-4 mb-2 px-2 flex flex-col items-center gap-y-3 lg:flex-row lg:justify-between"
             >
                 <paginate
+                    v-if="painateData"
                     :paginateDetails="painateData"
                     @onChangePage="getCateory"
                 />
@@ -166,12 +169,21 @@ export default {
             } = await APISERVICE.get(
                 `admin/category?page=${page}&items=${items}`
             );
-            console.log("parent", categoryData);
             this.painateData = categoryData;
             this.categories = categoryData.data;
             this.from = categoryData.from;
             this.to = categoryData.to;
             this.total = categoryData.total;
+        },
+
+        async deleteCategory(id) {
+            const { data: deleteResponse } = await APISERVICE.delete(
+                `admin/category/${id}`
+            );
+            if (deleteResponse.status === 200) {
+                this.$toast.success(deleteResponse?.message);
+                this.getCateory();
+            }
         },
     },
 };

@@ -6450,6 +6450,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
@@ -6487,19 +6490,49 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 4:
                 _yield$APISERVICE$get = _context.sent;
                 categoryData = _yield$APISERVICE$get.data.data;
-                console.log("parent", categoryData);
                 _this.painateData = categoryData;
                 _this.categories = categoryData.data;
                 _this.from = categoryData.from;
                 _this.to = categoryData.to;
                 _this.total = categoryData.total;
 
-              case 12:
+              case 11:
               case "end":
                 return _context.stop();
             }
           }
         }, _callee);
+      }))();
+    },
+    deleteCategory: function deleteCategory(id) {
+      var _this2 = this;
+
+      return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
+        var _yield$APISERVICE$del, deleteResponse;
+
+        return _regeneratorRuntime().wrap(function _callee2$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+                _context2.next = 2;
+                return APISERVICE["delete"]("admin/category/".concat(id));
+
+              case 2:
+                _yield$APISERVICE$del = _context2.sent;
+                deleteResponse = _yield$APISERVICE$del.data;
+
+                if (deleteResponse.status === 200) {
+                  _this2.$toast.success(deleteResponse === null || deleteResponse === void 0 ? void 0 : deleteResponse.message);
+
+                  _this2.getCateory();
+                }
+
+              case 5:
+              case "end":
+                return _context2.stop();
+            }
+          }
+        }, _callee2);
       }))();
     }
   }
@@ -46977,6 +47010,10 @@ var render = function () {
                             "bg-white border-b dark:bg-gray-800 dark:border-gray-700",
                         },
                         [
+                          _c("td", { staticClass: "pl-3 font-bold" }, [
+                            _vm._v(_vm._s(i + 1)),
+                          ]),
+                          _vm._v(" "),
                           _c("td", { staticClass: "w-[150px]" }, [
                             category.image !== null
                               ? _c("img", {
@@ -47035,7 +47072,28 @@ var render = function () {
                             ),
                           ]),
                           _vm._v(" "),
-                          _vm._m(1, true),
+                          _c("td", { staticClass: "py-4 px-6" }, [
+                            _c("div", { staticClass: "d-flex space-x-2" }, [
+                              _vm._m(1, true),
+                              _vm._v(" "),
+                              _c(
+                                "button",
+                                {
+                                  on: {
+                                    click: function ($event) {
+                                      return _vm.deleteCategory(category.id)
+                                    },
+                                  },
+                                },
+                                [
+                                  _c("i", {
+                                    staticClass:
+                                      "fa-solid fa-trash text-red-500 text-xl",
+                                  }),
+                                ]
+                              ),
+                            ]),
+                          ]),
                         ]
                       )
                     }),
@@ -47053,10 +47111,12 @@ var render = function () {
               "mt-4 mb-2 px-2 flex flex-col items-center gap-y-3 lg:flex-row lg:justify-between",
           },
           [
-            _c("paginate", {
-              attrs: { paginateDetails: _vm.painateData },
-              on: { onChangePage: _vm.getCateory },
-            }),
+            _vm.painateData
+              ? _c("paginate", {
+                  attrs: { paginateDetails: _vm.painateData },
+                  on: { onChangePage: _vm.getCateory },
+                })
+              : _vm._e(),
             _vm._v(" "),
             _c("div", { staticClass: "flex gap-x-3" }, [
               _c("p", [
@@ -47119,10 +47179,12 @@ var staticRenderFns = [
       },
       [
         _c("tr", [
-          _c("th", { staticClass: "py-3 px-6", attrs: { scope: "col" } }, [
-            _vm._v(
-              "\n                            Category Thumb\n                        "
-            ),
+          _c("th", { staticClass: "p-3", attrs: { scope: "col" } }, [
+            _vm._v("SL"),
+          ]),
+          _vm._v(" "),
+          _c("th", { staticClass: "p-3", attrs: { scope: "col" } }, [
+            _vm._v("Category Thumb"),
           ]),
           _vm._v(" "),
           _c("th", { staticClass: "py-3 px-6", attrs: { scope: "col" } }, [
@@ -47150,16 +47212,10 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("td", { staticClass: "py-4 px-6" }, [
-      _c("div", { staticClass: "d-flex space-x-2" }, [
-        _c("button", [
-          _c("i", { staticClass: "fa-regular fa-pen-to-square text-blue-400" }),
-        ]),
-        _vm._v(" "),
-        _c("button", [
-          _c("i", { staticClass: "fa-solid fa-trash text-red-500" }),
-        ]),
-      ]),
+    return _c("button", [
+      _c("i", {
+        staticClass: "fa-regular fa-pen-to-square text-blue-400 text-xl",
+      }),
     ])
   },
 ]
