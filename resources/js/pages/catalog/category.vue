@@ -39,49 +39,74 @@
                         class="text-xs text-gray-700 uppercase bg-sky-100 dark:bg-gray-700 dark:text-gray-400"
                     >
                         <tr>
+                            <th scope="col" class="py-3 px-6">
+                                Category Thumb
+                            </th>
                             <th scope="col" class="py-3 px-6">Category name</th>
-                            <th scope="col" class="py-3 px-6">Color</th>
-                            <th scope="col" class="py-3 px-6">Category</th>
-                            <th scope="col" class="py-3 px-6">Price</th>
+                            <th scope="col" class="py-3 px-6">
+                                Category Group
+                            </th>
+                            <th scope="col" class="py-3 px-6">Visibility</th>
+                            <th scope="col" class="py-3 px-6">Actions</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody v-if="categories !== null && categories.length > 0">
                         <tr
                             class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+                            v-for="(category, i) in categories"
+                            :key="i"
                         >
-                            <th
+                            <td class="w-[150px]">
+                                <img
+                                    v-if="category.image !== null"
+                                    class="w-10 h-10 object-cover ml-4"
+                                    :src="
+                                        '/images/uploads/category/' +
+                                        category.image
+                                    "
+                                />
+                                <img
+                                    v-else
+                                    class="w-10 h-10 object-cover ml-4"
+                                    src="/images/default.jpg"
+                                />
+                            </td>
+                            <td
                                 scope="row"
                                 class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                             >
-                                Apple MacBook Pro 17"
-                            </th>
-                            <td class="py-4 px-6">Sliver</td>
-                            <td class="py-4 px-6">Laptop</td>
-                            <td class="py-4 px-6">$2999</td>
-                        </tr>
-                        <tr
-                            class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
-                        >
-                            <th
-                                scope="row"
-                                class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                            >
-                                Microsoft Surface Pro
-                            </th>
-                            <td class="py-4 px-6">White</td>
-                            <td class="py-4 px-6">Laptop PC</td>
-                            <td class="py-4 px-6">$1999</td>
-                        </tr>
-                        <tr class="bg-white border-b dark:bg-gray-800">
-                            <th
-                                scope="row"
-                                class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                            >
-                                Magic Mouse 2
-                            </th>
-                            <td class="py-4 px-6">Black</td>
-                            <td class="py-4 px-6">Accessories</td>
-                            <td class="py-4 px-6">$99</td>
+                                {{
+                                    category.name != "null" ? category.name : ""
+                                }}
+                            </td>
+                            <td class="py-4 px-6">
+                                {{
+                                    category.parentCategory != "null"
+                                        ? category.parentCategory
+                                        : ""
+                                }}
+                            </td>
+                            <td class="py-4 px-6">
+                                {{
+                                    category.visibility != "null"
+                                        ? category.visibility
+                                        : ""
+                                }}
+                            </td>
+                            <td class="py-4 px-6">
+                                <div class="d-flex space-x-2">
+                                    <button>
+                                        <i
+                                            class="fa-regular fa-pen-to-square text-blue-400"
+                                        ></i>
+                                    </button>
+                                    <button>
+                                        <i
+                                            class="fa-solid fa-trash text-red-500"
+                                        ></i>
+                                    </button>
+                                </div>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
@@ -90,70 +115,22 @@
             <div
                 class="mt-4 mb-2 px-2 flex flex-col items-center gap-y-3 lg:flex-row lg:justify-between"
             >
-                <nav aria-label="Page navigation example">
-                    <ul class="inline-flex -space-x-px">
-                        <li>
-                            <a
-                                href="#"
-                                class="py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
-                                >Previous</a
-                            >
-                        </li>
-                        <li>
-                            <a
-                                href="#"
-                                class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
-                                >1</a
-                            >
-                        </li>
-                        <li>
-                            <a
-                                href="#"
-                                class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
-                                >2</a
-                            >
-                        </li>
-                        <li>
-                            <a
-                                href="#"
-                                aria-current="page"
-                                class="py-2 px-3 text-blue-600 bg-blue-50 border border-gray-300 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white"
-                                >3</a
-                            >
-                        </li>
-                        <li>
-                            <a
-                                href="#"
-                                class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
-                                >4</a
-                            >
-                        </li>
-                        <li>
-                            <a
-                                href="#"
-                                class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
-                                >5</a
-                            >
-                        </li>
-                        <li>
-                            <a
-                                href="#"
-                                class="py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
-                                >Next</a
-                            >
-                        </li>
-                    </ul>
-                </nav>
+                <paginate
+                    :paginateDetails="painateData"
+                    @onChangePage="getCateory"
+                />
+                <!-- pagination details -->
                 <div class="flex gap-x-3">
-                    <p>Showing 11 to 13 of 13</p>
+                    <p>Showing {{ from }} to {{ to }} of {{ total }}</p>
                     <label>/</label>
                     Rows per page
                     <select
                         id="countries"
                         class="bg-gray-50 border border-gray-300 outline-none text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500"
+                        @change="getCateory(1, $event.currentTarget.value)"
                     >
-                        <option value="16">16</option>
-                        <option value="25" selected>25</option>
+                        <option value="16" selected>10</option>
+                        <option value="25">25</option>
                         <option value="50">50</option>
                         <option value="75">75</option>
                         <option value="100">100</option>
@@ -165,5 +142,37 @@
 </template>
 
 <script>
-export default {};
+import paginate from "../../components/common/pagination.vue";
+export default {
+    components: {
+        paginate,
+    },
+    data() {
+        return {
+            categories: null,
+            from: 1,
+            to: 10,
+            total: 20,
+            painateData: null,
+        };
+    },
+    mounted() {
+        this.getCateory();
+    },
+    methods: {
+        async getCateory(page = 1, items = 10) {
+            const {
+                data: { data: categoryData },
+            } = await APISERVICE.get(
+                `admin/category?page=${page}&items=${items}`
+            );
+            console.log("parent", categoryData);
+            this.painateData = categoryData;
+            this.categories = categoryData.data;
+            this.from = categoryData.from;
+            this.to = categoryData.to;
+            this.total = categoryData.total;
+        },
+    },
+};
 </script>

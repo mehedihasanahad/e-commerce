@@ -194,22 +194,16 @@ export default {
     data() {
         return {
             category: {
-                name: "asdfasdf",
-                description: "<h1>fine</h1>",
+                name: null,
+                description: null,
                 visibility: null,
                 seoMetaDescription: null,
                 seoPageTitle: null,
                 image: null,
-                parentCategory: ["JavaScript", "Vue.js"],
+                parentCategory: null,
             },
             categoryImg: null,
-            options: [
-                { name: "Vue.js", language: "JavaScript" },
-                { name: "Rails", language: "Ruby" },
-                { name: "Sinatra", language: "Ruby" },
-                { name: "Laravel", language: "PHP" },
-                { name: "Phoenix", language: "Elixir" },
-            ],
+            options: ["Vue.js", "Rails", "Sinatra", "Laravel", "Phoenix"],
         };
     },
     methods: {
@@ -217,10 +211,25 @@ export default {
             this.category.image = event.target.files[0];
             this.categoryImg = URL.createObjectURL(event.target.files[0]);
         },
-        formSubmit(e) {
+        async formSubmit(e) {
             e.preventDefault();
             const formData = commonFunction.formdata(this.category);
-            console.log(formData);
+            try {
+                const storeResponse = await APISERVICE.post(
+                    "admin/category",
+                    formData
+                );
+                if (storeResponse.data?.error)
+                    this.$toast.error(storeResponse.data.error[0]);
+                else {
+                    if (storeResponse.data.status === 200) {
+                        this.$toast.success(storeResponse.data.message);
+                        this.$router.push("/category");
+                    }
+                }
+            } catch (error) {
+                this.$toast.error(error.message);
+            }
         },
     },
 };

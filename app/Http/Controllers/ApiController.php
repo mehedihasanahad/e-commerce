@@ -14,7 +14,7 @@ class ApiController extends Controller
         try {
             $moduleType = $request->segment(1);
             $routeName = $request->segment(3);
-            if ($moduleType == 'api') {
+            if (($moduleType == 'api') && ($routeName !== 'admin')) {
                 switch(true) {
                     case $routeName == 'getToken':
                         $tokenArray = CommonFunction::getToken($request);

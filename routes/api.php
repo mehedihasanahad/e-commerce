@@ -8,9 +8,11 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 
-Route::prefix('v1')->group(function() {
+Route::group(['prefix' => 'v1'], function() {
     Route::post('{any}', 'ApiController@handle');
+});
 
+Route::group(['prefix' => 'v1/admin'], function() {
     // category controllers
     Route::resource('category', 'Admin\CategoryController');
 });
