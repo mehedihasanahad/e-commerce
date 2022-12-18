@@ -5302,6 +5302,131 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/common/pagination.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/common/pagination.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: {
+    paginateDetails: {
+      type: Object
+    }
+  },
+  data: function data() {
+    return {
+      currentPage: 1
+    };
+  },
+  methods: {
+    getClickedBtn: function getClickedBtn(event) {
+      var currentpage = typeof event !== "number" ? event.currentTarget.textContent : event;
+      this.currentPage = currentpage;
+      this.$emit("onChangePage", currentpage);
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/dashboard/card.vue?vue&type=script&lang=js&":
 /*!*********************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/dashboard/card.vue?vue&type=script&lang=js& ***!
@@ -5352,6 +5477,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _listItem_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./listItem.vue */ "./resources/js/components/dashboard/listItem.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -5673,8 +5809,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
 function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ _regeneratorRuntime = function _regeneratorRuntime() { return exports; }; var exports = {}, Op = Object.prototype, hasOwn = Op.hasOwnProperty, $Symbol = "function" == typeof Symbol ? Symbol : {}, iteratorSymbol = $Symbol.iterator || "@@iterator", asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator", toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag"; function define(obj, key, value) { return Object.defineProperty(obj, key, { value: value, enumerable: !0, configurable: !0, writable: !0 }), obj[key]; } try { define({}, ""); } catch (err) { define = function define(obj, key, value) { return obj[key] = value; }; } function wrap(innerFn, outerFn, self, tryLocsList) { var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator, generator = Object.create(protoGenerator.prototype), context = new Context(tryLocsList || []); return generator._invoke = function (innerFn, self, context) { var state = "suspendedStart"; return function (method, arg) { if ("executing" === state) throw new Error("Generator is already running"); if ("completed" === state) { if ("throw" === method) throw arg; return doneResult(); } for (context.method = method, context.arg = arg;;) { var delegate = context.delegate; if (delegate) { var delegateResult = maybeInvokeDelegate(delegate, context); if (delegateResult) { if (delegateResult === ContinueSentinel) continue; return delegateResult; } } if ("next" === context.method) context.sent = context._sent = context.arg;else if ("throw" === context.method) { if ("suspendedStart" === state) throw state = "completed", context.arg; context.dispatchException(context.arg); } else "return" === context.method && context.abrupt("return", context.arg); state = "executing"; var record = tryCatch(innerFn, self, context); if ("normal" === record.type) { if (state = context.done ? "completed" : "suspendedYield", record.arg === ContinueSentinel) continue; return { value: record.arg, done: context.done }; } "throw" === record.type && (state = "completed", context.method = "throw", context.arg = record.arg); } }; }(innerFn, self, context), generator; } function tryCatch(fn, obj, arg) { try { return { type: "normal", arg: fn.call(obj, arg) }; } catch (err) { return { type: "throw", arg: err }; } } exports.wrap = wrap; var ContinueSentinel = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var IteratorPrototype = {}; define(IteratorPrototype, iteratorSymbol, function () { return this; }); var getProto = Object.getPrototypeOf, NativeIteratorPrototype = getProto && getProto(getProto(values([]))); NativeIteratorPrototype && NativeIteratorPrototype !== Op && hasOwn.call(NativeIteratorPrototype, iteratorSymbol) && (IteratorPrototype = NativeIteratorPrototype); var Gp = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(IteratorPrototype); function defineIteratorMethods(prototype) { ["next", "throw", "return"].forEach(function (method) { define(prototype, method, function (arg) { return this._invoke(method, arg); }); }); } function AsyncIterator(generator, PromiseImpl) { function invoke(method, arg, resolve, reject) { var record = tryCatch(generator[method], generator, arg); if ("throw" !== record.type) { var result = record.arg, value = result.value; return value && "object" == _typeof(value) && hasOwn.call(value, "__await") ? PromiseImpl.resolve(value.__await).then(function (value) { invoke("next", value, resolve, reject); }, function (err) { invoke("throw", err, resolve, reject); }) : PromiseImpl.resolve(value).then(function (unwrapped) { result.value = unwrapped, resolve(result); }, function (error) { return invoke("throw", error, resolve, reject); }); } reject(record.arg); } var previousPromise; this._invoke = function (method, arg) { function callInvokeWithMethodAndArg() { return new PromiseImpl(function (resolve, reject) { invoke(method, arg, resolve, reject); }); } return previousPromise = previousPromise ? previousPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); }; } function maybeInvokeDelegate(delegate, context) { var method = delegate.iterator[context.method]; if (undefined === method) { if (context.delegate = null, "throw" === context.method) { if (delegate.iterator["return"] && (context.method = "return", context.arg = undefined, maybeInvokeDelegate(delegate, context), "throw" === context.method)) return ContinueSentinel; context.method = "throw", context.arg = new TypeError("The iterator does not provide a 'throw' method"); } return ContinueSentinel; } var record = tryCatch(method, delegate.iterator, context.arg); if ("throw" === record.type) return context.method = "throw", context.arg = record.arg, context.delegate = null, ContinueSentinel; var info = record.arg; return info ? info.done ? (context[delegate.resultName] = info.value, context.next = delegate.nextLoc, "return" !== context.method && (context.method = "next", context.arg = undefined), context.delegate = null, ContinueSentinel) : info : (context.method = "throw", context.arg = new TypeError("iterator result is not an object"), context.delegate = null, ContinueSentinel); } function pushTryEntry(locs) { var entry = { tryLoc: locs[0] }; 1 in locs && (entry.catchLoc = locs[1]), 2 in locs && (entry.finallyLoc = locs[2], entry.afterLoc = locs[3]), this.tryEntries.push(entry); } function resetTryEntry(entry) { var record = entry.completion || {}; record.type = "normal", delete record.arg, entry.completion = record; } function Context(tryLocsList) { this.tryEntries = [{ tryLoc: "root" }], tryLocsList.forEach(pushTryEntry, this), this.reset(!0); } function values(iterable) { if (iterable) { var iteratorMethod = iterable[iteratorSymbol]; if (iteratorMethod) return iteratorMethod.call(iterable); if ("function" == typeof iterable.next) return iterable; if (!isNaN(iterable.length)) { var i = -1, next = function next() { for (; ++i < iterable.length;) { if (hasOwn.call(iterable, i)) return next.value = iterable[i], next.done = !1, next; } return next.value = undefined, next.done = !0, next; }; return next.next = next; } } return { next: doneResult }; } function doneResult() { return { value: undefined, done: !0 }; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, define(Gp, "constructor", GeneratorFunctionPrototype), define(GeneratorFunctionPrototype, "constructor", GeneratorFunction), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, toStringTagSymbol, "GeneratorFunction"), exports.isGeneratorFunction = function (genFun) { var ctor = "function" == typeof genFun && genFun.constructor; return !!ctor && (ctor === GeneratorFunction || "GeneratorFunction" === (ctor.displayName || ctor.name)); }, exports.mark = function (genFun) { return Object.setPrototypeOf ? Object.setPrototypeOf(genFun, GeneratorFunctionPrototype) : (genFun.__proto__ = GeneratorFunctionPrototype, define(genFun, toStringTagSymbol, "GeneratorFunction")), genFun.prototype = Object.create(Gp), genFun; }, exports.awrap = function (arg) { return { __await: arg }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, asyncIteratorSymbol, function () { return this; }), exports.AsyncIterator = AsyncIterator, exports.async = function (innerFn, outerFn, self, tryLocsList, PromiseImpl) { void 0 === PromiseImpl && (PromiseImpl = Promise); var iter = new AsyncIterator(wrap(innerFn, outerFn, self, tryLocsList), PromiseImpl); return exports.isGeneratorFunction(outerFn) ? iter : iter.next().then(function (result) { return result.done ? result.value : iter.next(); }); }, defineIteratorMethods(Gp), define(Gp, toStringTagSymbol, "Generator"), define(Gp, iteratorSymbol, function () { return this; }), define(Gp, "toString", function () { return "[object Generator]"; }), exports.keys = function (object) { var keys = []; for (var key in object) { keys.push(key); } return keys.reverse(), function next() { for (; keys.length;) { var key = keys.pop(); if (key in object) return next.value = key, next.done = !1, next; } return next.done = !0, next; }; }, exports.values = values, Context.prototype = { constructor: Context, reset: function reset(skipTempReset) { if (this.prev = 0, this.next = 0, this.sent = this._sent = undefined, this.done = !1, this.delegate = null, this.method = "next", this.arg = undefined, this.tryEntries.forEach(resetTryEntry), !skipTempReset) for (var name in this) { "t" === name.charAt(0) && hasOwn.call(this, name) && !isNaN(+name.slice(1)) && (this[name] = undefined); } }, stop: function stop() { this.done = !0; var rootRecord = this.tryEntries[0].completion; if ("throw" === rootRecord.type) throw rootRecord.arg; return this.rval; }, dispatchException: function dispatchException(exception) { if (this.done) throw exception; var context = this; function handle(loc, caught) { return record.type = "throw", record.arg = exception, context.next = loc, caught && (context.method = "next", context.arg = undefined), !!caught; } for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i], record = entry.completion; if ("root" === entry.tryLoc) return handle("end"); if (entry.tryLoc <= this.prev) { var hasCatch = hasOwn.call(entry, "catchLoc"), hasFinally = hasOwn.call(entry, "finallyLoc"); if (hasCatch && hasFinally) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } else if (hasCatch) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); } else { if (!hasFinally) throw new Error("try statement without catch or finally"); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } } } }, abrupt: function abrupt(type, arg) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc <= this.prev && hasOwn.call(entry, "finallyLoc") && this.prev < entry.finallyLoc) { var finallyEntry = entry; break; } } finallyEntry && ("break" === type || "continue" === type) && finallyEntry.tryLoc <= arg && arg <= finallyEntry.finallyLoc && (finallyEntry = null); var record = finallyEntry ? finallyEntry.completion : {}; return record.type = type, record.arg = arg, finallyEntry ? (this.method = "next", this.next = finallyEntry.finallyLoc, ContinueSentinel) : this.complete(record); }, complete: function complete(record, afterLoc) { if ("throw" === record.type) throw record.arg; return "break" === record.type || "continue" === record.type ? this.next = record.arg : "return" === record.type ? (this.rval = this.arg = record.arg, this.method = "return", this.next = "end") : "normal" === record.type && afterLoc && (this.next = afterLoc), ContinueSentinel; }, finish: function finish(finallyLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.finallyLoc === finallyLoc) return this.complete(entry.completion, entry.afterLoc), resetTryEntry(entry), ContinueSentinel; } }, "catch": function _catch(tryLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc === tryLoc) { var record = entry.completion; if ("throw" === record.type) { var thrown = record.arg; resetTryEntry(entry); } return thrown; } } throw new Error("illegal catch attempt"); }, delegateYield: function delegateYield(iterable, resultName, nextLoc) { return this.delegate = { iterator: values(iterable), resultName: resultName, nextLoc: nextLoc }, "next" === this.method && (this.arg = undefined), ContinueSentinel; } }, exports; }
@@ -5731,12 +5865,53 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
-      username: '',
-      password: '',
+      username: "",
+      password: "",
       remember: false,
       loading: false
     };
@@ -5744,14 +5919,14 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   mounted: function mounted() {
     var _this = this;
 
-    var token = sessionStorage.getItem('Authorization');
-    var rememberToken = this.$cookies.get('rememberToken'); // validateToken return a Promise
+    var token = sessionStorage.getItem("Authorization");
+    var rememberToken = this.$cookies.get("rememberToken"); // validateToken return a Promise
 
     if (rememberToken || token) {
       commonFunction.validateToken(token, rememberToken).then(function (resp) {
         var _resp$data;
 
-        if ((resp === null || resp === void 0 ? void 0 : (_resp$data = resp.data) === null || _resp$data === void 0 ? void 0 : _resp$data.status) == 200) _this.$router.push('/dashboard');
+        if ((resp === null || resp === void 0 ? void 0 : (_resp$data = resp.data) === null || _resp$data === void 0 ? void 0 : _resp$data.status) == 200) _this.$router.push("/dashboard");
       });
     }
   },
@@ -5768,13 +5943,13 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 0:
                 _context.prev = 0;
                 _this2.loading = true;
-                formData = commonFunction.formdate({
-                  'username': _this2.username,
-                  'password': _this2.password,
-                  'remember': _this2.remember
+                formData = commonFunction.formdata({
+                  username: _this2.username,
+                  password: _this2.password,
+                  remember: _this2.remember
                 });
                 _context.next = 5;
-                return APISERVICE.post('getToken', formData);
+                return APISERVICE.post("getToken", formData);
 
               case 5:
                 response = _context.sent;
@@ -5787,20 +5962,20 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                   userInfo = (_response$data4 = response.data) === null || _response$data4 === void 0 ? void 0 : (_response$data4$data = _response$data4.data) === null || _response$data4$data === void 0 ? void 0 : _response$data4$data.userInfo;
 
                   if (!rememberToken && token && userInfo) {
-                    sessionStorage.setItem('Authorization', "".concat(tokenType, " ").concat(token));
-                    sessionStorage.setItem('userInfo', JSON.stringify(userInfo));
+                    sessionStorage.setItem("Authorization", "".concat(tokenType, " ").concat(token));
+                    sessionStorage.setItem("userInfo", JSON.stringify(userInfo));
 
                     _this2.$toast.success("Welcom ".concat(userInfo.first_name));
 
-                    _this2.$router.push('/dashboard');
+                    _this2.$router.push("/dashboard");
                   } else if (rememberToken) {
-                    _this2.$cookies.set('rememberToken', "bearer ".concat(rememberToken), 60 * 60 * 24 * (365 * 2));
+                    _this2.$cookies.set("rememberToken", "bearer ".concat(rememberToken), 60 * 60 * 24 * (365 * 2));
 
-                    _this2.$cookies.set('userInfo', userInfo, 60 * 60 * 24 * (365 * 2));
+                    _this2.$cookies.set("userInfo", userInfo, 60 * 60 * 24 * (365 * 2));
 
                     _this2.$toast.success("Welcom ".concat(userInfo.first_name));
 
-                    _this2.$router.push('/dashboard');
+                    _this2.$router.push("/dashboard");
                   } else {
                     _this2.$toast.error("Invalid Credentials");
                   }
@@ -5843,6 +6018,114 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var vue2_editor_dist_vue2_editor_core_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue2-editor/dist/vue2-editor.core.js */ "./node_modules/vue2-editor/dist/vue2-editor.core.js");
 /* harmony import */ var vue2_editor_dist_vue2_editor_core_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue2_editor_dist_vue2_editor_core_js__WEBPACK_IMPORTED_MODULE_0__);
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ _regeneratorRuntime = function _regeneratorRuntime() { return exports; }; var exports = {}, Op = Object.prototype, hasOwn = Op.hasOwnProperty, $Symbol = "function" == typeof Symbol ? Symbol : {}, iteratorSymbol = $Symbol.iterator || "@@iterator", asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator", toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag"; function define(obj, key, value) { return Object.defineProperty(obj, key, { value: value, enumerable: !0, configurable: !0, writable: !0 }), obj[key]; } try { define({}, ""); } catch (err) { define = function define(obj, key, value) { return obj[key] = value; }; } function wrap(innerFn, outerFn, self, tryLocsList) { var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator, generator = Object.create(protoGenerator.prototype), context = new Context(tryLocsList || []); return generator._invoke = function (innerFn, self, context) { var state = "suspendedStart"; return function (method, arg) { if ("executing" === state) throw new Error("Generator is already running"); if ("completed" === state) { if ("throw" === method) throw arg; return doneResult(); } for (context.method = method, context.arg = arg;;) { var delegate = context.delegate; if (delegate) { var delegateResult = maybeInvokeDelegate(delegate, context); if (delegateResult) { if (delegateResult === ContinueSentinel) continue; return delegateResult; } } if ("next" === context.method) context.sent = context._sent = context.arg;else if ("throw" === context.method) { if ("suspendedStart" === state) throw state = "completed", context.arg; context.dispatchException(context.arg); } else "return" === context.method && context.abrupt("return", context.arg); state = "executing"; var record = tryCatch(innerFn, self, context); if ("normal" === record.type) { if (state = context.done ? "completed" : "suspendedYield", record.arg === ContinueSentinel) continue; return { value: record.arg, done: context.done }; } "throw" === record.type && (state = "completed", context.method = "throw", context.arg = record.arg); } }; }(innerFn, self, context), generator; } function tryCatch(fn, obj, arg) { try { return { type: "normal", arg: fn.call(obj, arg) }; } catch (err) { return { type: "throw", arg: err }; } } exports.wrap = wrap; var ContinueSentinel = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var IteratorPrototype = {}; define(IteratorPrototype, iteratorSymbol, function () { return this; }); var getProto = Object.getPrototypeOf, NativeIteratorPrototype = getProto && getProto(getProto(values([]))); NativeIteratorPrototype && NativeIteratorPrototype !== Op && hasOwn.call(NativeIteratorPrototype, iteratorSymbol) && (IteratorPrototype = NativeIteratorPrototype); var Gp = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(IteratorPrototype); function defineIteratorMethods(prototype) { ["next", "throw", "return"].forEach(function (method) { define(prototype, method, function (arg) { return this._invoke(method, arg); }); }); } function AsyncIterator(generator, PromiseImpl) { function invoke(method, arg, resolve, reject) { var record = tryCatch(generator[method], generator, arg); if ("throw" !== record.type) { var result = record.arg, value = result.value; return value && "object" == _typeof(value) && hasOwn.call(value, "__await") ? PromiseImpl.resolve(value.__await).then(function (value) { invoke("next", value, resolve, reject); }, function (err) { invoke("throw", err, resolve, reject); }) : PromiseImpl.resolve(value).then(function (unwrapped) { result.value = unwrapped, resolve(result); }, function (error) { return invoke("throw", error, resolve, reject); }); } reject(record.arg); } var previousPromise; this._invoke = function (method, arg) { function callInvokeWithMethodAndArg() { return new PromiseImpl(function (resolve, reject) { invoke(method, arg, resolve, reject); }); } return previousPromise = previousPromise ? previousPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); }; } function maybeInvokeDelegate(delegate, context) { var method = delegate.iterator[context.method]; if (undefined === method) { if (context.delegate = null, "throw" === context.method) { if (delegate.iterator["return"] && (context.method = "return", context.arg = undefined, maybeInvokeDelegate(delegate, context), "throw" === context.method)) return ContinueSentinel; context.method = "throw", context.arg = new TypeError("The iterator does not provide a 'throw' method"); } return ContinueSentinel; } var record = tryCatch(method, delegate.iterator, context.arg); if ("throw" === record.type) return context.method = "throw", context.arg = record.arg, context.delegate = null, ContinueSentinel; var info = record.arg; return info ? info.done ? (context[delegate.resultName] = info.value, context.next = delegate.nextLoc, "return" !== context.method && (context.method = "next", context.arg = undefined), context.delegate = null, ContinueSentinel) : info : (context.method = "throw", context.arg = new TypeError("iterator result is not an object"), context.delegate = null, ContinueSentinel); } function pushTryEntry(locs) { var entry = { tryLoc: locs[0] }; 1 in locs && (entry.catchLoc = locs[1]), 2 in locs && (entry.finallyLoc = locs[2], entry.afterLoc = locs[3]), this.tryEntries.push(entry); } function resetTryEntry(entry) { var record = entry.completion || {}; record.type = "normal", delete record.arg, entry.completion = record; } function Context(tryLocsList) { this.tryEntries = [{ tryLoc: "root" }], tryLocsList.forEach(pushTryEntry, this), this.reset(!0); } function values(iterable) { if (iterable) { var iteratorMethod = iterable[iteratorSymbol]; if (iteratorMethod) return iteratorMethod.call(iterable); if ("function" == typeof iterable.next) return iterable; if (!isNaN(iterable.length)) { var i = -1, next = function next() { for (; ++i < iterable.length;) { if (hasOwn.call(iterable, i)) return next.value = iterable[i], next.done = !1, next; } return next.value = undefined, next.done = !0, next; }; return next.next = next; } } return { next: doneResult }; } function doneResult() { return { value: undefined, done: !0 }; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, define(Gp, "constructor", GeneratorFunctionPrototype), define(GeneratorFunctionPrototype, "constructor", GeneratorFunction), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, toStringTagSymbol, "GeneratorFunction"), exports.isGeneratorFunction = function (genFun) { var ctor = "function" == typeof genFun && genFun.constructor; return !!ctor && (ctor === GeneratorFunction || "GeneratorFunction" === (ctor.displayName || ctor.name)); }, exports.mark = function (genFun) { return Object.setPrototypeOf ? Object.setPrototypeOf(genFun, GeneratorFunctionPrototype) : (genFun.__proto__ = GeneratorFunctionPrototype, define(genFun, toStringTagSymbol, "GeneratorFunction")), genFun.prototype = Object.create(Gp), genFun; }, exports.awrap = function (arg) { return { __await: arg }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, asyncIteratorSymbol, function () { return this; }), exports.AsyncIterator = AsyncIterator, exports.async = function (innerFn, outerFn, self, tryLocsList, PromiseImpl) { void 0 === PromiseImpl && (PromiseImpl = Promise); var iter = new AsyncIterator(wrap(innerFn, outerFn, self, tryLocsList), PromiseImpl); return exports.isGeneratorFunction(outerFn) ? iter : iter.next().then(function (result) { return result.done ? result.value : iter.next(); }); }, defineIteratorMethods(Gp), define(Gp, toStringTagSymbol, "Generator"), define(Gp, iteratorSymbol, function () { return this; }), define(Gp, "toString", function () { return "[object Generator]"; }), exports.keys = function (object) { var keys = []; for (var key in object) { keys.push(key); } return keys.reverse(), function next() { for (; keys.length;) { var key = keys.pop(); if (key in object) return next.value = key, next.done = !1, next; } return next.done = !0, next; }; }, exports.values = values, Context.prototype = { constructor: Context, reset: function reset(skipTempReset) { if (this.prev = 0, this.next = 0, this.sent = this._sent = undefined, this.done = !1, this.delegate = null, this.method = "next", this.arg = undefined, this.tryEntries.forEach(resetTryEntry), !skipTempReset) for (var name in this) { "t" === name.charAt(0) && hasOwn.call(this, name) && !isNaN(+name.slice(1)) && (this[name] = undefined); } }, stop: function stop() { this.done = !0; var rootRecord = this.tryEntries[0].completion; if ("throw" === rootRecord.type) throw rootRecord.arg; return this.rval; }, dispatchException: function dispatchException(exception) { if (this.done) throw exception; var context = this; function handle(loc, caught) { return record.type = "throw", record.arg = exception, context.next = loc, caught && (context.method = "next", context.arg = undefined), !!caught; } for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i], record = entry.completion; if ("root" === entry.tryLoc) return handle("end"); if (entry.tryLoc <= this.prev) { var hasCatch = hasOwn.call(entry, "catchLoc"), hasFinally = hasOwn.call(entry, "finallyLoc"); if (hasCatch && hasFinally) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } else if (hasCatch) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); } else { if (!hasFinally) throw new Error("try statement without catch or finally"); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } } } }, abrupt: function abrupt(type, arg) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc <= this.prev && hasOwn.call(entry, "finallyLoc") && this.prev < entry.finallyLoc) { var finallyEntry = entry; break; } } finallyEntry && ("break" === type || "continue" === type) && finallyEntry.tryLoc <= arg && arg <= finallyEntry.finallyLoc && (finallyEntry = null); var record = finallyEntry ? finallyEntry.completion : {}; return record.type = type, record.arg = arg, finallyEntry ? (this.method = "next", this.next = finallyEntry.finallyLoc, ContinueSentinel) : this.complete(record); }, complete: function complete(record, afterLoc) { if ("throw" === record.type) throw record.arg; return "break" === record.type || "continue" === record.type ? this.next = record.arg : "return" === record.type ? (this.rval = this.arg = record.arg, this.method = "return", this.next = "end") : "normal" === record.type && afterLoc && (this.next = afterLoc), ContinueSentinel; }, finish: function finish(finallyLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.finallyLoc === finallyLoc) return this.complete(entry.completion, entry.afterLoc), resetTryEntry(entry), ContinueSentinel; } }, "catch": function _catch(tryLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc === tryLoc) { var record = entry.completion; if ("throw" === record.type) { var thrown = record.arg; resetTryEntry(entry); } return thrown; } } throw new Error("illegal catch attempt"); }, delegateYield: function delegateYield(iterable, resultName, nextLoc) { return this.delegate = { iterator: values(iterable), resultName: resultName, nextLoc: nextLoc }, "next" === this.method && (this.arg = undefined), ContinueSentinel; } }, exports; }
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -5940,37 +6223,64 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       category: {
-        name: 'asdfasdf',
-        description: '<h1>fine</h1>',
-        image: null
+        name: null,
+        description: null,
+        visibility: null,
+        seoMetaDescription: null,
+        seoPageTitle: null,
+        image: null,
+        parentCategory: null
       },
       categoryImg: null,
-      value: {
-        name: 'Vue.js',
-        language: 'JavaScript'
-      },
-      options: [{
-        name: 'Vue.js',
-        language: 'JavaScript'
-      }, {
-        name: 'Rails',
-        language: 'Ruby'
-      }, {
-        name: 'Sinatra',
-        language: 'Ruby'
-      }, {
-        name: 'Laravel',
-        language: 'PHP'
-      }, {
-        name: 'Phoenix',
-        language: 'Elixir'
-      }]
+      options: ["Vue.js", "Rails", "Sinatra", "Laravel", "Phoenix"]
     };
   },
   methods: {
     getFile: function getFile(event) {
       this.category.image = event.target.files[0];
       this.categoryImg = URL.createObjectURL(event.target.files[0]);
+    },
+    formSubmit: function formSubmit(e) {
+      var _this = this;
+
+      return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
+        var formData, _storeResponse$data, storeResponse;
+
+        return _regeneratorRuntime().wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                e.preventDefault();
+                formData = commonFunction.formdata(_this.category);
+                _context.prev = 2;
+                _context.next = 5;
+                return APISERVICE.post("admin/category", formData);
+
+              case 5:
+                storeResponse = _context.sent;
+                if ((_storeResponse$data = storeResponse.data) !== null && _storeResponse$data !== void 0 && _storeResponse$data.error) _this.$toast.error(storeResponse.data.error[0]);else {
+                  if (storeResponse.data.status === 200) {
+                    _this.$toast.success(storeResponse.data.message);
+
+                    _this.$router.push("/category");
+                  }
+                }
+                _context.next = 12;
+                break;
+
+              case 9:
+                _context.prev = 9;
+                _context.t0 = _context["catch"](2);
+
+                _this.$toast.error(_context.t0.message);
+
+              case 12:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee, null, [[2, 9]]);
+      }))();
     }
   }
 });
@@ -5988,6 +6298,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var _components_common_pagination_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../components/common/pagination.vue */ "./resources/js/components/common/pagination.vue");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ _regeneratorRuntime = function _regeneratorRuntime() { return exports; }; var exports = {}, Op = Object.prototype, hasOwn = Op.hasOwnProperty, $Symbol = "function" == typeof Symbol ? Symbol : {}, iteratorSymbol = $Symbol.iterator || "@@iterator", asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator", toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag"; function define(obj, key, value) { return Object.defineProperty(obj, key, { value: value, enumerable: !0, configurable: !0, writable: !0 }), obj[key]; } try { define({}, ""); } catch (err) { define = function define(obj, key, value) { return obj[key] = value; }; } function wrap(innerFn, outerFn, self, tryLocsList) { var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator, generator = Object.create(protoGenerator.prototype), context = new Context(tryLocsList || []); return generator._invoke = function (innerFn, self, context) { var state = "suspendedStart"; return function (method, arg) { if ("executing" === state) throw new Error("Generator is already running"); if ("completed" === state) { if ("throw" === method) throw arg; return doneResult(); } for (context.method = method, context.arg = arg;;) { var delegate = context.delegate; if (delegate) { var delegateResult = maybeInvokeDelegate(delegate, context); if (delegateResult) { if (delegateResult === ContinueSentinel) continue; return delegateResult; } } if ("next" === context.method) context.sent = context._sent = context.arg;else if ("throw" === context.method) { if ("suspendedStart" === state) throw state = "completed", context.arg; context.dispatchException(context.arg); } else "return" === context.method && context.abrupt("return", context.arg); state = "executing"; var record = tryCatch(innerFn, self, context); if ("normal" === record.type) { if (state = context.done ? "completed" : "suspendedYield", record.arg === ContinueSentinel) continue; return { value: record.arg, done: context.done }; } "throw" === record.type && (state = "completed", context.method = "throw", context.arg = record.arg); } }; }(innerFn, self, context), generator; } function tryCatch(fn, obj, arg) { try { return { type: "normal", arg: fn.call(obj, arg) }; } catch (err) { return { type: "throw", arg: err }; } } exports.wrap = wrap; var ContinueSentinel = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var IteratorPrototype = {}; define(IteratorPrototype, iteratorSymbol, function () { return this; }); var getProto = Object.getPrototypeOf, NativeIteratorPrototype = getProto && getProto(getProto(values([]))); NativeIteratorPrototype && NativeIteratorPrototype !== Op && hasOwn.call(NativeIteratorPrototype, iteratorSymbol) && (IteratorPrototype = NativeIteratorPrototype); var Gp = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(IteratorPrototype); function defineIteratorMethods(prototype) { ["next", "throw", "return"].forEach(function (method) { define(prototype, method, function (arg) { return this._invoke(method, arg); }); }); } function AsyncIterator(generator, PromiseImpl) { function invoke(method, arg, resolve, reject) { var record = tryCatch(generator[method], generator, arg); if ("throw" !== record.type) { var result = record.arg, value = result.value; return value && "object" == _typeof(value) && hasOwn.call(value, "__await") ? PromiseImpl.resolve(value.__await).then(function (value) { invoke("next", value, resolve, reject); }, function (err) { invoke("throw", err, resolve, reject); }) : PromiseImpl.resolve(value).then(function (unwrapped) { result.value = unwrapped, resolve(result); }, function (error) { return invoke("throw", error, resolve, reject); }); } reject(record.arg); } var previousPromise; this._invoke = function (method, arg) { function callInvokeWithMethodAndArg() { return new PromiseImpl(function (resolve, reject) { invoke(method, arg, resolve, reject); }); } return previousPromise = previousPromise ? previousPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); }; } function maybeInvokeDelegate(delegate, context) { var method = delegate.iterator[context.method]; if (undefined === method) { if (context.delegate = null, "throw" === context.method) { if (delegate.iterator["return"] && (context.method = "return", context.arg = undefined, maybeInvokeDelegate(delegate, context), "throw" === context.method)) return ContinueSentinel; context.method = "throw", context.arg = new TypeError("The iterator does not provide a 'throw' method"); } return ContinueSentinel; } var record = tryCatch(method, delegate.iterator, context.arg); if ("throw" === record.type) return context.method = "throw", context.arg = record.arg, context.delegate = null, ContinueSentinel; var info = record.arg; return info ? info.done ? (context[delegate.resultName] = info.value, context.next = delegate.nextLoc, "return" !== context.method && (context.method = "next", context.arg = undefined), context.delegate = null, ContinueSentinel) : info : (context.method = "throw", context.arg = new TypeError("iterator result is not an object"), context.delegate = null, ContinueSentinel); } function pushTryEntry(locs) { var entry = { tryLoc: locs[0] }; 1 in locs && (entry.catchLoc = locs[1]), 2 in locs && (entry.finallyLoc = locs[2], entry.afterLoc = locs[3]), this.tryEntries.push(entry); } function resetTryEntry(entry) { var record = entry.completion || {}; record.type = "normal", delete record.arg, entry.completion = record; } function Context(tryLocsList) { this.tryEntries = [{ tryLoc: "root" }], tryLocsList.forEach(pushTryEntry, this), this.reset(!0); } function values(iterable) { if (iterable) { var iteratorMethod = iterable[iteratorSymbol]; if (iteratorMethod) return iteratorMethod.call(iterable); if ("function" == typeof iterable.next) return iterable; if (!isNaN(iterable.length)) { var i = -1, next = function next() { for (; ++i < iterable.length;) { if (hasOwn.call(iterable, i)) return next.value = iterable[i], next.done = !1, next; } return next.value = undefined, next.done = !0, next; }; return next.next = next; } } return { next: doneResult }; } function doneResult() { return { value: undefined, done: !0 }; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, define(Gp, "constructor", GeneratorFunctionPrototype), define(GeneratorFunctionPrototype, "constructor", GeneratorFunction), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, toStringTagSymbol, "GeneratorFunction"), exports.isGeneratorFunction = function (genFun) { var ctor = "function" == typeof genFun && genFun.constructor; return !!ctor && (ctor === GeneratorFunction || "GeneratorFunction" === (ctor.displayName || ctor.name)); }, exports.mark = function (genFun) { return Object.setPrototypeOf ? Object.setPrototypeOf(genFun, GeneratorFunctionPrototype) : (genFun.__proto__ = GeneratorFunctionPrototype, define(genFun, toStringTagSymbol, "GeneratorFunction")), genFun.prototype = Object.create(Gp), genFun; }, exports.awrap = function (arg) { return { __await: arg }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, asyncIteratorSymbol, function () { return this; }), exports.AsyncIterator = AsyncIterator, exports.async = function (innerFn, outerFn, self, tryLocsList, PromiseImpl) { void 0 === PromiseImpl && (PromiseImpl = Promise); var iter = new AsyncIterator(wrap(innerFn, outerFn, self, tryLocsList), PromiseImpl); return exports.isGeneratorFunction(outerFn) ? iter : iter.next().then(function (result) { return result.done ? result.value : iter.next(); }); }, defineIteratorMethods(Gp), define(Gp, toStringTagSymbol, "Generator"), define(Gp, iteratorSymbol, function () { return this; }), define(Gp, "toString", function () { return "[object Generator]"; }), exports.keys = function (object) { var keys = []; for (var key in object) { keys.push(key); } return keys.reverse(), function next() { for (; keys.length;) { var key = keys.pop(); if (key in object) return next.value = key, next.done = !1, next; } return next.done = !0, next; }; }, exports.values = values, Context.prototype = { constructor: Context, reset: function reset(skipTempReset) { if (this.prev = 0, this.next = 0, this.sent = this._sent = undefined, this.done = !1, this.delegate = null, this.method = "next", this.arg = undefined, this.tryEntries.forEach(resetTryEntry), !skipTempReset) for (var name in this) { "t" === name.charAt(0) && hasOwn.call(this, name) && !isNaN(+name.slice(1)) && (this[name] = undefined); } }, stop: function stop() { this.done = !0; var rootRecord = this.tryEntries[0].completion; if ("throw" === rootRecord.type) throw rootRecord.arg; return this.rval; }, dispatchException: function dispatchException(exception) { if (this.done) throw exception; var context = this; function handle(loc, caught) { return record.type = "throw", record.arg = exception, context.next = loc, caught && (context.method = "next", context.arg = undefined), !!caught; } for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i], record = entry.completion; if ("root" === entry.tryLoc) return handle("end"); if (entry.tryLoc <= this.prev) { var hasCatch = hasOwn.call(entry, "catchLoc"), hasFinally = hasOwn.call(entry, "finallyLoc"); if (hasCatch && hasFinally) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } else if (hasCatch) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); } else { if (!hasFinally) throw new Error("try statement without catch or finally"); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } } } }, abrupt: function abrupt(type, arg) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc <= this.prev && hasOwn.call(entry, "finallyLoc") && this.prev < entry.finallyLoc) { var finallyEntry = entry; break; } } finallyEntry && ("break" === type || "continue" === type) && finallyEntry.tryLoc <= arg && arg <= finallyEntry.finallyLoc && (finallyEntry = null); var record = finallyEntry ? finallyEntry.completion : {}; return record.type = type, record.arg = arg, finallyEntry ? (this.method = "next", this.next = finallyEntry.finallyLoc, ContinueSentinel) : this.complete(record); }, complete: function complete(record, afterLoc) { if ("throw" === record.type) throw record.arg; return "break" === record.type || "continue" === record.type ? this.next = record.arg : "return" === record.type ? (this.rval = this.arg = record.arg, this.method = "return", this.next = "end") : "normal" === record.type && afterLoc && (this.next = afterLoc), ContinueSentinel; }, finish: function finish(finallyLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.finallyLoc === finallyLoc) return this.complete(entry.completion, entry.afterLoc), resetTryEntry(entry), ContinueSentinel; } }, "catch": function _catch(tryLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc === tryLoc) { var record = entry.completion; if ("throw" === record.type) { var thrown = record.arg; resetTryEntry(entry); } return thrown; } } throw new Error("illegal catch attempt"); }, delegateYield: function delegateYield(iterable, resultName, nextLoc) { return this.delegate = { iterator: values(iterable), resultName: resultName, nextLoc: nextLoc }, "next" === this.method && (this.arg = undefined), ContinueSentinel; } }, exports; }
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
 //
 //
 //
@@ -6112,7 +6431,112 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  components: {
+    paginate: _components_common_pagination_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  data: function data() {
+    return {
+      categories: null,
+      from: 1,
+      to: 10,
+      total: 20,
+      painateData: null
+    };
+  },
+  mounted: function mounted() {
+    this.getCateory();
+  },
+  methods: {
+    getCateory: function getCateory() {
+      var _arguments = arguments,
+          _this = this;
+
+      return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
+        var page, items, _yield$APISERVICE$get, categoryData;
+
+        return _regeneratorRuntime().wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                page = _arguments.length > 0 && _arguments[0] !== undefined ? _arguments[0] : 1;
+                items = _arguments.length > 1 && _arguments[1] !== undefined ? _arguments[1] : 10;
+                _context.next = 4;
+                return APISERVICE.get("admin/category?page=".concat(page, "&items=").concat(items));
+
+              case 4:
+                _yield$APISERVICE$get = _context.sent;
+                categoryData = _yield$APISERVICE$get.data.data;
+                _this.painateData = categoryData;
+                _this.categories = categoryData.data;
+                _this.from = categoryData.from;
+                _this.to = categoryData.to;
+                _this.total = categoryData.total;
+
+              case 11:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }))();
+    },
+    deleteCategory: function deleteCategory(id) {
+      var _this2 = this;
+
+      return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
+        var _yield$APISERVICE$del, deleteResponse;
+
+        return _regeneratorRuntime().wrap(function _callee2$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+                _context2.next = 2;
+                return APISERVICE["delete"]("admin/category/".concat(id));
+
+              case 2:
+                _yield$APISERVICE$del = _context2.sent;
+                deleteResponse = _yield$APISERVICE$del.data;
+
+                if (deleteResponse.status === 200) {
+                  _this2.$toast.success(deleteResponse === null || deleteResponse === void 0 ? void 0 : deleteResponse.message);
+
+                  _this2.getCateory();
+                }
+
+              case 5:
+              case "end":
+                return _context2.stop();
+            }
+          }
+        }, _callee2);
+      }))();
+    }
+  }
+});
 
 /***/ }),
 
@@ -6766,19 +7190,8 @@ window.commonFunction = _helper_commonFunction__WEBPACK_IMPORTED_MODULE_8__["def
 Vue.component('multiselect', (vue_multiselect__WEBPACK_IMPORTED_MODULE_9___default())); // select box
 
 
+
 Vue.component('v-select', (vue_select__WEBPACK_IMPORTED_MODULE_10___default()));
-
-/**
- * The following block of code may be used to automatically register your
- * Vue components. It will recursively scan this directory for the Vue
- * components and automatically register them with their "basename".
- *
- * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
- */
-// const files = require.context('./', true, /\.vue$/i)
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
-// Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-
 
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
   routes: _router_js__WEBPACK_IMPORTED_MODULE_12__["default"],
@@ -6888,8 +7301,8 @@ var CommonFunction = /*#__PURE__*/function () {
   }
 
   _createClass(CommonFunction, null, [{
-    key: "formdate",
-    value: function formdate(payload) {
+    key: "formdata",
+    value: function formdata(payload) {
       var formData = new FormData();
 
       for (var formDataKey in payload) {
@@ -6915,7 +7328,7 @@ var CommonFunction = /*#__PURE__*/function () {
                   break;
                 }
 
-                formData = this.formdate({
+                formData = this.formdata({
                   'token': rememberToken
                 });
                 _context.next = 5;
@@ -6931,7 +7344,7 @@ var CommonFunction = /*#__PURE__*/function () {
                   break;
                 }
 
-                _formData = this.formdate({
+                _formData = this.formdata({
                   'token': token
                 });
                 _context.next = 13;
@@ -44204,6 +44617,45 @@ module.exports = function (list, options) {
 
 /***/ }),
 
+/***/ "./resources/js/components/common/pagination.vue":
+/*!*******************************************************!*\
+  !*** ./resources/js/components/common/pagination.vue ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _pagination_vue_vue_type_template_id_76c43c83___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./pagination.vue?vue&type=template&id=76c43c83& */ "./resources/js/components/common/pagination.vue?vue&type=template&id=76c43c83&");
+/* harmony import */ var _pagination_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./pagination.vue?vue&type=script&lang=js& */ "./resources/js/components/common/pagination.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _pagination_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _pagination_vue_vue_type_template_id_76c43c83___WEBPACK_IMPORTED_MODULE_0__.render,
+  _pagination_vue_vue_type_template_id_76c43c83___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/common/pagination.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/components/dashboard/card.vue":
 /*!****************************************************!*\
   !*** ./resources/js/components/dashboard/card.vue ***!
@@ -44637,6 +45089,22 @@ component.options.__file = "resources/js/pages/dashboard.vue"
 
 /***/ }),
 
+/***/ "./resources/js/components/common/pagination.vue?vue&type=script&lang=js&":
+/*!********************************************************************************!*\
+  !*** ./resources/js/components/common/pagination.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_pagination_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./pagination.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/common/pagination.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_pagination_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
 /***/ "./resources/js/components/dashboard/card.vue?vue&type=script&lang=js&":
 /*!*****************************************************************************!*\
   !*** ./resources/js/components/dashboard/card.vue?vue&type=script&lang=js& ***!
@@ -44839,6 +45307,23 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/common/pagination.vue?vue&type=template&id=76c43c83&":
+/*!**************************************************************************************!*\
+  !*** ./resources/js/components/common/pagination.vue?vue&type=template&id=76c43c83& ***!
+  \**************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_pagination_vue_vue_type_template_id_76c43c83___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_pagination_vue_vue_type_template_id_76c43c83___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_pagination_vue_vue_type_template_id_76c43c83___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./pagination.vue?vue&type=template&id=76c43c83& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/common/pagination.vue?vue&type=template&id=76c43c83&");
+
+
+/***/ }),
+
 /***/ "./resources/js/components/dashboard/card.vue?vue&type=template&id=b2fd8194&":
 /*!***********************************************************************************!*\
   !*** ./resources/js/components/dashboard/card.vue?vue&type=template&id=b2fd8194& ***!
@@ -45026,6 +45511,156 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/common/pagination.vue?vue&type=template&id=76c43c83&":
+/*!*****************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/common/pagination.vue?vue&type=template&id=76c43c83& ***!
+  \*****************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("nav", { attrs: { "aria-label": "Page navigation example" } }, [
+      _c(
+        "ul",
+        { staticClass: "inline-flex -space-x-px" },
+        [
+          _c("li", [
+            _c(
+              "button",
+              {
+                class: [
+                  "py-2",
+                  "px-3",
+                  "ml-0",
+                  "leading-tight",
+                  "text-gray-500",
+                  "bg-white",
+                  "rounded-l-lg",
+                  "border",
+                  "border-gray-300",
+                  "hover:bg-gray-100",
+                  "hover:text-gray-700",
+                  "dark:bg-gray-800",
+                  "dark:border-gray-700",
+                  "dark:text-gray-400",
+                  "dark:hover:bg-gray-700",
+                  "dark:hover:text-white",
+                  " select-none",
+                  _vm.paginateDetails.current_page === 1
+                    ? "pointer-events-none opacity-50"
+                    : "",
+                ],
+                on: {
+                  click: function ($event) {
+                    return _vm.getClickedBtn(
+                      _vm.paginateDetails.current_page - 1
+                    )
+                  },
+                },
+              },
+              [_vm._v("\n                    Previous\n                ")]
+            ),
+          ]),
+          _vm._v(" "),
+          _vm._l(_vm.paginateDetails.last_page, function (page, i) {
+            return _c("li", { key: i }, [
+              _c(
+                "button",
+                {
+                  class: [
+                    "py-2",
+                    "px-3",
+                    "ml-0",
+                    "leading-tight",
+                    "text-gray-500",
+                    "bg-white",
+                    "border",
+                    "border-gray-300",
+                    "hover:bg-gray-100",
+                    "hover:text-gray-700",
+                    "dark:bg-gray-800",
+                    "dark:border-gray-700",
+                    "dark:text-gray-400",
+                    "dark:hover:bg-gray-700",
+                    "dark:hover:text-white",
+                    " select-none",
+                  ],
+                  on: {
+                    click: function ($event) {
+                      return _vm.getClickedBtn($event)
+                    },
+                  },
+                },
+                [
+                  _vm._v(
+                    "\n                    " +
+                      _vm._s(i + 1) +
+                      "\n                "
+                  ),
+                ]
+              ),
+            ])
+          }),
+          _vm._v(" "),
+          _c("li", [
+            _c(
+              "button",
+              {
+                class: [
+                  "py-2",
+                  "px-3",
+                  "ml-0",
+                  "leading-tight",
+                  "text-gray-500",
+                  "bg-white",
+                  "rounded-r-lg",
+                  "border",
+                  "border-gray-300",
+                  "hover:bg-gray-100",
+                  "hover:text-gray-700",
+                  "dark:bg-gray-800",
+                  "dark:border-gray-700",
+                  "dark:text-gray-400",
+                  "dark:hover:bg-gray-700",
+                  "dark:hover:text-white",
+                  " select-none",
+                  _vm.paginateDetails.last_page === _vm.currentPage
+                    ? "pointer-events-none opacity-50"
+                    : "",
+                ],
+                on: {
+                  click: function ($event) {
+                    return _vm.getClickedBtn(
+                      _vm.paginateDetails.current_page + 1
+                    )
+                  },
+                },
+              },
+              [_vm._v("\n                    Next\n                ")]
+            ),
+          ]),
+        ],
+        2
+      ),
+    ]),
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/dashboard/card.vue?vue&type=template&id=b2fd8194&":
 /*!**************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/dashboard/card.vue?vue&type=template&id=b2fd8194& ***!
@@ -45142,7 +45777,7 @@ var render = function () {
       _c(
         "h1",
         { staticClass: "text-gray-300 text-xs uppercase mt-2 mb-1 px-3" },
-        [_vm._v("Application")]
+        [_vm._v("\n        Application\n    ")]
       ),
       _vm._v(" "),
       _c(
@@ -45174,16 +45809,12 @@ var render = function () {
                   "list-inside mt-2 child:px-3 child:block child-hover:hover:bg-slate-400 child:mb-2 text-white child:cursor-pointer",
               },
               [
-                _c("router-link", { attrs: { to: "/product" } }, [
-                  _vm._v(
-                    "\n                    Products List\n                "
-                  ),
+                _c("router-link", { attrs: { to: "/category" } }, [
+                  _vm._v(" Categories List "),
                 ]),
                 _vm._v(" "),
-                _c("router-link", { attrs: { to: "/category" } }, [
-                  _vm._v(
-                    "\n                    Categories List\n                "
-                  ),
+                _c("router-link", { attrs: { to: "/product" } }, [
+                  _vm._v(" Products List "),
                 ]),
               ],
               1
@@ -45803,13 +46434,7 @@ var render = function () {
                       "w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-blue-500 rounded hover:bg-blue-600 focus:outline-none focus:bg-blue-600",
                   },
                   [
-                    !_vm.loading
-                      ? _c("span", [
-                          _vm._v(
-                            "\n                        Login\n                    "
-                          ),
-                        ])
-                      : _vm._e(),
+                    !_vm.loading ? _c("span", [_vm._v(" Login ")]) : _vm._e(),
                     _vm._v(" "),
                     _vm.loading
                       ? _c("span", [
@@ -45846,11 +46471,13 @@ var staticRenderFns = [
         ]),
         _vm._v(" "),
         _c("h3", { staticClass: "font-semibold text-white text-xl mb-1" }, [
-          _vm._v("Let's Get Started E-BD"),
+          _vm._v("\n                Let's Get Started E-BD\n            "),
         ]),
         _vm._v(" "),
         _c("p", { staticClass: "text-xs text-slate-400" }, [
-          _vm._v("Sign in to continue to E-BD."),
+          _vm._v(
+            "\n                Sign in to continue to E-BD.\n            "
+          ),
         ]),
       ]
     )
@@ -45880,256 +46507,372 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c("div", [
     _c(
-      "div",
-      { staticClass: "flex justify-between" },
-      [
-        _c("h1", { staticClass: "font-bold text-2xl" }, [
-          _vm._v("Create Category"),
-        ]),
-        _vm._v(" "),
-        _c(
-          "router-link",
-          {
-            staticClass:
-              "bg-yellow-400 text-sm font-bold py-1.5 px-2 active:shadow-lg hover:bg-yellow-300",
-            attrs: { to: "/sdf" },
+      "form",
+      {
+        on: {
+          submit: function ($event) {
+            return _vm.formSubmit($event)
           },
-          [_vm._v("Save")]
-        ),
-      ],
-      1
-    ),
-    _vm._v(" "),
-    _c("div", { staticClass: "grid grid-cols-1 lg:grid-cols-3 gap-6 mt-4" }, [
-      _c("div", { staticClass: "lg:col-span-2 flex flex-col gap-y-6" }, [
-        _c("div", { staticClass: "dashboard-container" }, [
-          _c("div", { staticClass: "font-bold text-lg mb-4" }, [
-            _vm._v("Basic information"),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "child:mt-4" }, [
-            _c("div", [
-              _c(
-                "label",
-                {
-                  staticClass: "block text-sm font-bold mb-1",
-                  attrs: { for: "name" },
-                },
-                [_vm._v("Name")]
-              ),
-              _vm._v(" "),
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.category.name,
-                    expression: "category.name",
-                  },
-                ],
-                staticClass:
-                  "focus:outline-yellow-500/30 py-1.5 px-2 w-full border border-gray-300 text-sm",
-                attrs: { type: "text", id: "name" },
-                domProps: { value: _vm.category.name },
-                on: {
-                  input: function ($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.$set(_vm.category, "name", $event.target.value)
-                  },
-                },
-              }),
-            ]),
-            _vm._v(" "),
-            _c(
-              "div",
-              [
-                _c(
-                  "label",
-                  {
-                    staticClass: "block text-sm font-bold mb-1",
-                    attrs: { for: "des" },
-                  },
-                  [_vm._v("Description")]
-                ),
-                _vm._v(" "),
-                _c("VueEditor", {
-                  attrs: { id: "des" },
-                  model: {
-                    value: _vm.category.description,
-                    callback: function ($$v) {
-                      _vm.$set(_vm.category, "description", $$v)
-                    },
-                    expression: "category.description",
-                  },
-                }),
-              ],
-              1
-            ),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "dashboard-container" }, [
-          _c("div", { staticClass: "font-bold text-lg mb-4" }, [
-            _vm._v("Search engine optimization"),
-          ]),
-          _vm._v(" "),
-          _c("p", { staticClass: "text-sm text-gray-500" }, [
-            _vm._v(
-              "\n                    Provide information that will help improve the snippet and bring your category to the top of search engines.\n                "
-            ),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "child:mt-4" }, [
-            _c("div", [
-              _c(
-                "label",
-                {
-                  staticClass: "block text-sm font-bold mb-1",
-                  attrs: { for: "title" },
-                },
-                [_vm._v("Page title")]
-              ),
-              _vm._v(" "),
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.category.name,
-                    expression: "category.name",
-                  },
-                ],
-                staticClass:
-                  "focus:outline-yellow-500/30 py-1.5 px-2 w-full border border-gray-300 text-sm",
-                attrs: { type: "text", id: "title" },
-                domProps: { value: _vm.category.name },
-                on: {
-                  input: function ($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.$set(_vm.category, "name", $event.target.value)
-                  },
-                },
-              }),
-            ]),
-            _vm._v(" "),
-            _c("div", [
-              _c(
-                "label",
-                {
-                  staticClass: "block text-sm font-bold mb-1",
-                  attrs: { for: "m-des" },
-                },
-                [_vm._v("Meta description")]
-              ),
-              _vm._v(" "),
-              _c("textarea", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.category.name,
-                    expression: "category.name",
-                  },
-                ],
-                staticClass:
-                  "focus:outline-yellow-500/30 py-1.5 px-2 w-full border border-gray-300 text-sm",
-                attrs: { id: "m-des" },
-                domProps: { value: _vm.category.name },
-                on: {
-                  input: function ($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.$set(_vm.category, "name", $event.target.value)
-                  },
-                },
-              }),
-            ]),
-          ]),
-        ]),
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "h-min flex flex-col gap-y-6" }, [
-        _vm._m(0),
-        _vm._v(" "),
-        _c("div", { staticClass: "dashboard-container z-10" }, [
-          _c("div", { staticClass: "font-bold text-lg mb-4" }, [
-            _vm._v("Parent Category"),
-          ]),
+        },
+      },
+      [
+        _c("div", [
+          _vm._m(0),
           _vm._v(" "),
           _c(
             "div",
-            [
-              _c("v-select", {
-                attrs: { label: "name", options: _vm.options },
-                model: {
-                  value: _vm.value,
-                  callback: function ($$v) {
-                    _vm.value = $$v
-                  },
-                  expression: "value",
-                },
-              }),
-              _vm._v(" "),
-              _c("p", { staticClass: "text-xs text-gray-500" }, [
-                _vm._v(
-                  "Select a category that will be the parent of the current one."
-                ),
-              ]),
-            ],
-            1
-          ),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "dashboard-container" }, [
-          _c("div", { staticClass: "font-bold text-lg mb-4" }, [
-            _vm._v("Image"),
-          ]),
-          _vm._v(" "),
-          _c(
-            "label",
-            { staticClass: "cursor-pointer", attrs: { for: "imageDisplay" } },
+            { staticClass: "grid grid-cols-1 lg:grid-cols-3 gap-6 mt-4" },
             [
               _c(
                 "div",
-                {
-                  staticClass:
-                    "relative w-full h-64 border flex justify-center items-center hover:bg-gray-200/30",
-                },
+                { staticClass: "lg:col-span-2 flex flex-col gap-y-6" },
                 [
-                  _vm.categoryImg
-                    ? _c(
+                  _c("div", { staticClass: "dashboard-container" }, [
+                    _c("div", { staticClass: "font-bold text-lg mb-4" }, [
+                      _vm._v(
+                        "\n                            Basic information\n                        "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "child:mt-4" }, [
+                      _c("div", [
+                        _c(
+                          "label",
+                          {
+                            staticClass: "block text-sm font-bold mb-1",
+                            attrs: { for: "name" },
+                          },
+                          [_vm._v("Name")]
+                        ),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.category.name,
+                              expression: "category.name",
+                            },
+                          ],
+                          staticClass:
+                            "focus:outline-yellow-500/30 py-1.5 px-2 w-full border border-gray-300 text-sm",
+                          attrs: { type: "text", id: "name", required: "" },
+                          domProps: { value: _vm.category.name },
+                          on: {
+                            input: function ($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(
+                                _vm.category,
+                                "name",
+                                $event.target.value
+                              )
+                            },
+                          },
+                        }),
+                      ]),
+                      _vm._v(" "),
+                      _c(
                         "div",
-                        { staticClass: "w-full h-64 hover-wrapper:flex" },
                         [
-                          _c("img", {
-                            staticClass: "w-full h-64 object-cover",
-                            attrs: { src: _vm.categoryImg },
-                          }),
+                          _c(
+                            "label",
+                            {
+                              staticClass: "block text-sm font-bold mb-1",
+                              attrs: { for: "des" },
+                            },
+                            [_vm._v("Description")]
+                          ),
                           _vm._v(" "),
-                          _vm._m(1),
-                        ]
-                      )
-                    : _c("i", {
-                        staticClass: "fa-solid fa-cloud-arrow-up text-[50px]",
-                      }),
+                          _c("VueEditor", {
+                            attrs: { id: "des" },
+                            model: {
+                              value: _vm.category.description,
+                              callback: function ($$v) {
+                                _vm.$set(_vm.category, "description", $$v)
+                              },
+                              expression: "category.description",
+                            },
+                          }),
+                        ],
+                        1
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "dashboard-container" }, [
+                    _c("div", { staticClass: "font-bold text-lg mb-4" }, [
+                      _vm._v(
+                        "\n                            Search engine optimization\n                        "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "text-sm text-gray-500" }, [
+                      _vm._v(
+                        "\n                            Provide information that will help improve the\n                            snippet and bring your category to the top of\n                            search engines.\n                        "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "child:mt-4" }, [
+                      _c("div", [
+                        _c(
+                          "label",
+                          {
+                            staticClass: "block text-sm font-bold mb-1",
+                            attrs: { for: "title" },
+                          },
+                          [_vm._v("Page title")]
+                        ),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.category.seoPageTitle,
+                              expression: "category.seoPageTitle",
+                            },
+                          ],
+                          staticClass:
+                            "focus:outline-yellow-500/30 py-1.5 px-2 w-full border border-gray-300 text-sm",
+                          attrs: { type: "text", id: "title", required: "" },
+                          domProps: { value: _vm.category.seoPageTitle },
+                          on: {
+                            input: function ($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(
+                                _vm.category,
+                                "seoPageTitle",
+                                $event.target.value
+                              )
+                            },
+                          },
+                        }),
+                      ]),
+                      _vm._v(" "),
+                      _c("div", [
+                        _c(
+                          "label",
+                          {
+                            staticClass: "block text-sm font-bold mb-1",
+                            attrs: { for: "m-des" },
+                          },
+                          [_vm._v("Meta description")]
+                        ),
+                        _vm._v(" "),
+                        _c("textarea", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.category.seoMetaDescription,
+                              expression: "category.seoMetaDescription",
+                            },
+                          ],
+                          staticClass:
+                            "focus:outline-yellow-500/30 py-1.5 px-2 w-full border border-gray-300 text-sm",
+                          attrs: { id: "m-des", required: "" },
+                          domProps: { value: _vm.category.seoMetaDescription },
+                          on: {
+                            input: function ($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(
+                                _vm.category,
+                                "seoMetaDescription",
+                                $event.target.value
+                              )
+                            },
+                          },
+                        }),
+                      ]),
+                    ]),
+                  ]),
                 ]
               ),
+              _vm._v(" "),
+              _c("div", { staticClass: "h-min flex flex-col gap-y-6" }, [
+                _c("div", { staticClass: "dashboard-container" }, [
+                  _c("div", { staticClass: "font-bold text-lg mb-4" }, [
+                    _vm._v("Visibility"),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "flex items-center mb-4" }, [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.category.visibility,
+                          expression: "category.visibility",
+                        },
+                      ],
+                      staticClass:
+                        "w-4 h-4 text-yellow-600 bg-gray-100 border-gray-300",
+                      attrs: {
+                        id: "publish",
+                        type: "radio",
+                        value: "publish",
+                        name: "publish-radio",
+                        checked: "",
+                        required: "",
+                      },
+                      domProps: {
+                        checked: _vm._q(_vm.category.visibility, "publish"),
+                      },
+                      on: {
+                        change: function ($event) {
+                          return _vm.$set(_vm.category, "visibility", "publish")
+                        },
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "label",
+                      {
+                        staticClass:
+                          "ml-2 text-sm font-medium text-gray-900 dark:text-gray-300",
+                        attrs: { for: "publish" },
+                      },
+                      [_vm._v("Publish")]
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "flex items-center mb-4" }, [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.category.visibility,
+                          expression: "category.visibility",
+                        },
+                      ],
+                      staticClass:
+                        "w-4 h-4 text-yellow-600 bg-gray-100 border-gray-300",
+                      attrs: {
+                        id: "hidden",
+                        type: "radio",
+                        value: "hidden",
+                        name: "publish-radio",
+                      },
+                      domProps: {
+                        checked: _vm._q(_vm.category.visibility, "hidden"),
+                      },
+                      on: {
+                        change: function ($event) {
+                          return _vm.$set(_vm.category, "visibility", "hidden")
+                        },
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "label",
+                      {
+                        staticClass:
+                          "ml-2 text-sm font-medium text-gray-900 dark:text-gray-300",
+                        attrs: { for: "hidden" },
+                      },
+                      [_vm._v("Hidden")]
+                    ),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "dashboard-container z-10" }, [
+                  _c("div", { staticClass: "font-bold text-lg mb-4" }, [
+                    _vm._v(
+                      "\n                            Parent Category\n                        "
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    [
+                      _c("v-select", {
+                        attrs: { label: "name", options: _vm.options },
+                        model: {
+                          value: _vm.category.parentCategory,
+                          callback: function ($$v) {
+                            _vm.$set(_vm.category, "parentCategory", $$v)
+                          },
+                          expression: "category.parentCategory",
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("p", { staticClass: "text-xs text-gray-500" }, [
+                        _vm._v(
+                          "\n                                Select a category that will be the parent of\n                                the current one.\n                            "
+                        ),
+                      ]),
+                    ],
+                    1
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "dashboard-container" }, [
+                  _c("div", { staticClass: "font-bold text-lg mb-4" }, [
+                    _vm._v("Image"),
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "label",
+                    {
+                      staticClass: "cursor-pointer",
+                      attrs: { for: "imageDisplay" },
+                    },
+                    [
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "relative w-full h-64 border flex justify-center items-center hover:bg-gray-200/30",
+                        },
+                        [
+                          _vm.categoryImg
+                            ? _c(
+                                "div",
+                                {
+                                  staticClass: "w-full h-64 hover-wrapper:flex",
+                                },
+                                [
+                                  _c("img", {
+                                    staticClass: "w-full h-64 object-cover",
+                                    attrs: { src: _vm.categoryImg },
+                                  }),
+                                  _vm._v(" "),
+                                  _vm._m(1),
+                                ]
+                              )
+                            : _c("i", {
+                                staticClass:
+                                  "fa-solid fa-cloud-arrow-up text-[50px]",
+                              }),
+                        ]
+                      ),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("input", {
+                    staticClass: "opacity-0 pointer-events-none",
+                    attrs: {
+                      type: "file",
+                      name: "categoryImg",
+                      id: "imageDisplay",
+                      required: "",
+                    },
+                    on: { change: _vm.getFile },
+                  }),
+                ]),
+              ]),
             ]
           ),
-          _vm._v(" "),
-          _c("input", {
-            staticClass: "hidden",
-            attrs: { type: "file", id: "imageDisplay" },
-            on: { change: _vm.getFile },
-          }),
         ]),
-      ]),
-    ]),
+      ]
+    ),
   ])
 }
 var staticRenderFns = [
@@ -46137,55 +46880,19 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "dashboard-container" }, [
-      _c("div", { staticClass: "font-bold text-lg mb-4" }, [
-        _vm._v("Visibility"),
+    return _c("div", { staticClass: "flex justify-between" }, [
+      _c("h1", { staticClass: "font-bold text-2xl" }, [
+        _vm._v("Create Category"),
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "flex items-center mb-4" }, [
-        _c("input", {
-          staticClass: "w-4 h-4 text-yellow-600 bg-gray-100 border-gray-300",
-          attrs: {
-            id: "publish",
-            type: "radio",
-            value: "",
-            name: "publish-radio",
-            checked: "",
-          },
-        }),
-        _vm._v(" "),
-        _c(
-          "label",
-          {
-            staticClass:
-              "ml-2 text-sm font-medium text-gray-900 dark:text-gray-300",
-            attrs: { for: "publish" },
-          },
-          [_vm._v("Publish")]
-        ),
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "flex items-center mb-4" }, [
-        _c("input", {
-          staticClass: "w-4 h-4 text-yellow-600 bg-gray-100 border-gray-300",
-          attrs: {
-            id: "hidden",
-            type: "radio",
-            value: "",
-            name: "publish-radio",
-          },
-        }),
-        _vm._v(" "),
-        _c(
-          "label",
-          {
-            staticClass:
-              "ml-2 text-sm font-medium text-gray-900 dark:text-gray-300",
-            attrs: { for: "hidden" },
-          },
-          [_vm._v("Hidden")]
-        ),
-      ]),
+      _c(
+        "button",
+        {
+          staticClass:
+            "bg-yellow-400 text-sm font-bold py-1.5 px-2 active:shadow-lg hover:bg-yellow-300",
+        },
+        [_vm._v("\n                    Save\n                ")]
+      ),
     ])
   },
   function () {
@@ -46281,9 +46988,180 @@ var render = function () {
           }),
         ]),
         _vm._v(" "),
-        _vm._m(0),
+        _c("div", { staticClass: "overflow-x-auto relative mt-2" }, [
+          _c(
+            "table",
+            {
+              staticClass:
+                "w-full text-sm text-left text-gray-500 dark:text-gray-400",
+            },
+            [
+              _vm._m(0),
+              _vm._v(" "),
+              _vm.categories !== null && _vm.categories.length > 0
+                ? _c(
+                    "tbody",
+                    _vm._l(_vm.categories, function (category, i) {
+                      return _c(
+                        "tr",
+                        {
+                          key: i,
+                          staticClass:
+                            "bg-white border-b dark:bg-gray-800 dark:border-gray-700",
+                        },
+                        [
+                          _c("td", { staticClass: "pl-3 font-bold" }, [
+                            _vm._v(_vm._s(i + 1)),
+                          ]),
+                          _vm._v(" "),
+                          _c("td", { staticClass: "w-[150px]" }, [
+                            category.image !== null
+                              ? _c("img", {
+                                  staticClass: "w-10 h-10 object-cover ml-4",
+                                  attrs: {
+                                    src:
+                                      "/images/uploads/category/" +
+                                      category.image,
+                                  },
+                                })
+                              : _c("img", {
+                                  staticClass: "w-10 h-10 object-cover ml-4",
+                                  attrs: { src: "/images/default.jpg" },
+                                }),
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "td",
+                            {
+                              staticClass:
+                                "py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white",
+                              attrs: { scope: "row" },
+                            },
+                            [
+                              _vm._v(
+                                "\n                            " +
+                                  _vm._s(
+                                    category.name != "null" ? category.name : ""
+                                  ) +
+                                  "\n                        "
+                              ),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("td", { staticClass: "py-4 px-6" }, [
+                            _vm._v(
+                              "\n                            " +
+                                _vm._s(
+                                  category.parentCategory != "null"
+                                    ? category.parentCategory
+                                    : ""
+                                ) +
+                                "\n                        "
+                            ),
+                          ]),
+                          _vm._v(" "),
+                          _c("td", { staticClass: "py-4 px-6" }, [
+                            _vm._v(
+                              "\n                            " +
+                                _vm._s(
+                                  category.visibility != "null"
+                                    ? category.visibility
+                                    : ""
+                                ) +
+                                "\n                        "
+                            ),
+                          ]),
+                          _vm._v(" "),
+                          _c("td", { staticClass: "py-4 px-6" }, [
+                            _c("div", { staticClass: "d-flex space-x-2" }, [
+                              _vm._m(1, true),
+                              _vm._v(" "),
+                              _c(
+                                "button",
+                                {
+                                  on: {
+                                    click: function ($event) {
+                                      return _vm.deleteCategory(category.id)
+                                    },
+                                  },
+                                },
+                                [
+                                  _c("i", {
+                                    staticClass:
+                                      "fa-solid fa-trash text-red-500 text-xl",
+                                  }),
+                                ]
+                              ),
+                            ]),
+                          ]),
+                        ]
+                      )
+                    }),
+                    0
+                  )
+                : _vm._e(),
+            ]
+          ),
+        ]),
         _vm._v(" "),
-        _vm._m(1),
+        _c(
+          "div",
+          {
+            staticClass:
+              "mt-4 mb-2 px-2 flex flex-col items-center gap-y-3 lg:flex-row lg:justify-between",
+          },
+          [
+            _vm.painateData
+              ? _c("paginate", {
+                  attrs: { paginateDetails: _vm.painateData },
+                  on: { onChangePage: _vm.getCateory },
+                })
+              : _vm._e(),
+            _vm._v(" "),
+            _c("div", { staticClass: "flex gap-x-3" }, [
+              _c("p", [
+                _vm._v(
+                  "Showing " +
+                    _vm._s(_vm.from) +
+                    " to " +
+                    _vm._s(_vm.to) +
+                    " of " +
+                    _vm._s(_vm.total)
+                ),
+              ]),
+              _vm._v(" "),
+              _c("label", [_vm._v("/")]),
+              _vm._v("\n                Rows per page\n                "),
+              _c(
+                "select",
+                {
+                  staticClass:
+                    "bg-gray-50 border border-gray-300 outline-none text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500",
+                  attrs: { id: "countries" },
+                  on: {
+                    change: function ($event) {
+                      return _vm.getCateory(1, $event.currentTarget.value)
+                    },
+                  },
+                },
+                [
+                  _c("option", { attrs: { value: "16", selected: "" } }, [
+                    _vm._v("10"),
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "25" } }, [_vm._v("25")]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "50" } }, [_vm._v("50")]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "75" } }, [_vm._v("75")]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "100" } }, [_vm._v("100")]),
+                ]
+              ),
+            ]),
+          ],
+          1
+        ),
       ]
     ),
   ])
@@ -46293,314 +47171,52 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "overflow-x-auto relative mt-2" }, [
-      _c(
-        "table",
-        {
-          staticClass:
-            "w-full text-sm text-left text-gray-500 dark:text-gray-400",
-        },
-        [
-          _c(
-            "thead",
-            {
-              staticClass:
-                "text-xs text-gray-700 uppercase bg-sky-100 dark:bg-gray-700 dark:text-gray-400",
-            },
-            [
-              _c("tr", [
-                _c(
-                  "th",
-                  { staticClass: "py-3 px-6", attrs: { scope: "col" } },
-                  [
-                    _vm._v(
-                      "\n                            Category name\n                        "
-                    ),
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "th",
-                  { staticClass: "py-3 px-6", attrs: { scope: "col" } },
-                  [
-                    _vm._v(
-                      "\n                            Color\n                        "
-                    ),
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "th",
-                  { staticClass: "py-3 px-6", attrs: { scope: "col" } },
-                  [
-                    _vm._v(
-                      "\n                            Category\n                        "
-                    ),
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "th",
-                  { staticClass: "py-3 px-6", attrs: { scope: "col" } },
-                  [
-                    _vm._v(
-                      "\n                            Price\n                        "
-                    ),
-                  ]
-                ),
-              ]),
-            ]
-          ),
-          _vm._v(" "),
-          _c("tbody", [
-            _c(
-              "tr",
-              {
-                staticClass:
-                  "bg-white border-b dark:bg-gray-800 dark:border-gray-700",
-              },
-              [
-                _c(
-                  "th",
-                  {
-                    staticClass:
-                      "py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white",
-                    attrs: { scope: "row" },
-                  },
-                  [
-                    _vm._v(
-                      '\n                            Apple MacBook Pro 17"\n                        '
-                    ),
-                  ]
-                ),
-                _vm._v(" "),
-                _c("td", { staticClass: "py-4 px-6" }, [
-                  _vm._v(
-                    "\n                            Sliver\n                        "
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("td", { staticClass: "py-4 px-6" }, [
-                  _vm._v(
-                    "\n                            Laptop\n                        "
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("td", { staticClass: "py-4 px-6" }, [
-                  _vm._v(
-                    "\n                            $2999\n                        "
-                  ),
-                ]),
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "tr",
-              {
-                staticClass:
-                  "bg-white border-b dark:bg-gray-800 dark:border-gray-700",
-              },
-              [
-                _c(
-                  "th",
-                  {
-                    staticClass:
-                      "py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white",
-                    attrs: { scope: "row" },
-                  },
-                  [
-                    _vm._v(
-                      "\n                            Microsoft Surface Pro\n                        "
-                    ),
-                  ]
-                ),
-                _vm._v(" "),
-                _c("td", { staticClass: "py-4 px-6" }, [
-                  _vm._v(
-                    "\n                            White\n                        "
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("td", { staticClass: "py-4 px-6" }, [
-                  _vm._v(
-                    "\n                            Laptop PC\n                        "
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("td", { staticClass: "py-4 px-6" }, [
-                  _vm._v(
-                    "\n                            $1999\n                        "
-                  ),
-                ]),
-              ]
-            ),
-            _vm._v(" "),
-            _c("tr", { staticClass: "bg-white border-b dark:bg-gray-800" }, [
-              _c(
-                "th",
-                {
-                  staticClass:
-                    "py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white",
-                  attrs: { scope: "row" },
-                },
-                [
-                  _vm._v(
-                    "\n                            Magic Mouse 2\n                        "
-                  ),
-                ]
-              ),
-              _vm._v(" "),
-              _c("td", { staticClass: "py-4 px-6" }, [
-                _vm._v(
-                  "\n                            Black\n                        "
-                ),
-              ]),
-              _vm._v(" "),
-              _c("td", { staticClass: "py-4 px-6" }, [
-                _vm._v(
-                  "\n                            Accessories\n                        "
-                ),
-              ]),
-              _vm._v(" "),
-              _c("td", { staticClass: "py-4 px-6" }, [
-                _vm._v(
-                  "\n                            $99\n                        "
-                ),
-              ]),
-            ]),
+    return _c(
+      "thead",
+      {
+        staticClass:
+          "text-xs text-gray-700 uppercase bg-sky-100 dark:bg-gray-700 dark:text-gray-400",
+      },
+      [
+        _c("tr", [
+          _c("th", { staticClass: "p-3", attrs: { scope: "col" } }, [
+            _vm._v("SL"),
           ]),
-        ]
-      ),
-    ])
+          _vm._v(" "),
+          _c("th", { staticClass: "p-3", attrs: { scope: "col" } }, [
+            _vm._v("Category Thumb"),
+          ]),
+          _vm._v(" "),
+          _c("th", { staticClass: "py-3 px-6", attrs: { scope: "col" } }, [
+            _vm._v("Category name"),
+          ]),
+          _vm._v(" "),
+          _c("th", { staticClass: "py-3 px-6", attrs: { scope: "col" } }, [
+            _vm._v(
+              "\n                            Category Group\n                        "
+            ),
+          ]),
+          _vm._v(" "),
+          _c("th", { staticClass: "py-3 px-6", attrs: { scope: "col" } }, [
+            _vm._v("Visibility"),
+          ]),
+          _vm._v(" "),
+          _c("th", { staticClass: "py-3 px-6", attrs: { scope: "col" } }, [
+            _vm._v("Actions"),
+          ]),
+        ]),
+      ]
+    )
   },
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass:
-          "mt-4 mb-2 px-2 flex flex-col items-center gap-y-3 lg:flex-row lg:justify-between",
-      },
-      [
-        _c("nav", { attrs: { "aria-label": "Page navigation example" } }, [
-          _c("ul", { staticClass: "inline-flex -space-x-px" }, [
-            _c("li", [
-              _c(
-                "a",
-                {
-                  staticClass:
-                    "py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white",
-                  attrs: { href: "#" },
-                },
-                [_vm._v("Previous")]
-              ),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c(
-                "a",
-                {
-                  staticClass:
-                    "py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white",
-                  attrs: { href: "#" },
-                },
-                [_vm._v("1")]
-              ),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c(
-                "a",
-                {
-                  staticClass:
-                    "py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white",
-                  attrs: { href: "#" },
-                },
-                [_vm._v("2")]
-              ),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c(
-                "a",
-                {
-                  staticClass:
-                    "py-2 px-3 text-blue-600 bg-blue-50 border border-gray-300 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white",
-                  attrs: { href: "#", "aria-current": "page" },
-                },
-                [_vm._v("3")]
-              ),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c(
-                "a",
-                {
-                  staticClass:
-                    "py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white",
-                  attrs: { href: "#" },
-                },
-                [_vm._v("4")]
-              ),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c(
-                "a",
-                {
-                  staticClass:
-                    "py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white",
-                  attrs: { href: "#" },
-                },
-                [_vm._v("5")]
-              ),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c(
-                "a",
-                {
-                  staticClass:
-                    "py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white",
-                  attrs: { href: "#" },
-                },
-                [_vm._v("Next")]
-              ),
-            ]),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "flex gap-x-3" }, [
-          _c("p", [_vm._v("Showing 11 to 13 of 13")]),
-          _vm._v(" "),
-          _c("label", [_vm._v("/")]),
-          _vm._v("\n                Rows per page\n                "),
-          _c(
-            "select",
-            {
-              staticClass:
-                "bg-gray-50 border border-gray-300 outline-none text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500",
-              attrs: { id: "countries" },
-            },
-            [
-              _c("option", { attrs: { value: "16" } }, [_vm._v("16")]),
-              _vm._v(" "),
-              _c("option", { attrs: { value: "25", selected: "" } }, [
-                _vm._v("25"),
-              ]),
-              _vm._v(" "),
-              _c("option", { attrs: { value: "50" } }, [_vm._v("50")]),
-              _vm._v(" "),
-              _c("option", { attrs: { value: "75" } }, [_vm._v("75")]),
-              _vm._v(" "),
-              _c("option", { attrs: { value: "100" } }, [_vm._v("100")]),
-            ]
-          ),
-        ]),
-      ]
-    )
+    return _c("button", [
+      _c("i", {
+        staticClass: "fa-regular fa-pen-to-square text-blue-400 text-xl",
+      }),
+    ])
   },
 ]
 render._withStripped = true

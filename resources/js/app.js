@@ -15,7 +15,7 @@ import VueRouter from 'vue-router';
 Vue.use(VueRouter);
 
 //outside-click
-import vClickOutside from 'v-click-outside'
+import vClickOutside from 'v-click-outside';
 Vue.use(vClickOutside)
 
 //Axios
@@ -23,7 +23,7 @@ import apiService from './axios';
 window.APISERVICE = apiService;
 
 //Cookie
-import VueCookies from 'vue-cookies'
+import VueCookies from 'vue-cookies';
 Vue.use(VueCookies);
 
 //Toast message
@@ -53,25 +53,14 @@ import commonFunction from './helper/commonFunction';
 window.commonFunction = commonFunction;
 
 // select box
-import Multiselect from 'vue-multiselect'
+import Multiselect from 'vue-multiselect';
 Vue.component('multiselect', Multiselect)
 
 // select box
-import vSelect from 'vue-select'
-Vue.component('v-select', vSelect)
+import vSelect from 'vue-select';
 import 'vue-select/dist/vue-select.css';
+Vue.component('v-select', vSelect)
 
-/**
- * The following block of code may be used to automatically register your
- * Vue components. It will recursively scan this directory for the Vue
- * components and automatically register them with their "basename".
- *
- * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
- */
-
-// const files = require.context('./', true, /\.vue$/i)
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
-// Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
 import routes from './router.js';
 
