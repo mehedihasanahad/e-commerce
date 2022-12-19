@@ -1285,9 +1285,6 @@ video {
 .pr-2 {
   padding-right: 0.5rem;
 }
-.pl-2 {
-  padding-left: 0.5rem;
-}
 .text-left {
   text-align: left;
 }
@@ -1436,20 +1433,11 @@ video {
 .accent-orange-500 {
   accent-color: #f97316;
 }
-.opacity-0 {
-  opacity: 0;
-}
-.opacity-5 {
-  opacity: 0.05;
-}
-.opacity-10 {
-  opacity: 0.1;
-}
-.opacity-30 {
-  opacity: 0.3;
-}
 .opacity-50 {
   opacity: 0.5;
+}
+.opacity-0 {
+  opacity: 0;
 }
 .shadow-md {
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);

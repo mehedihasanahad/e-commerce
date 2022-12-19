@@ -90,7 +90,25 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $productCategory = ProductCategories::find($id);
+        $productCategory->name = $request->name;
+        $productCategory->description = $request->description;
+        $productCategory->visibility = $request->visibility;
+        $productCategory->seoMetaDescription = $request->seoMetaDescription;
+        $productCategory->seoPageTitle = $request->seoPageTitle;
+        $productCategory->parentCategory = $request->parentCategory;
+        if($request->isImageString == false) {
+            $imageName = time().'.'.$request->image->extension();
+            $request->image->move(public_path('images/uploads/category/'), $imageName);
+            $productCategory->image = $imageName;
+        } else {
+            $productCategory->image = $request->image;
+        }
+        $productCategory->save();
+
+        if ($productCategory) {
+            ResponseController::apiResponse(200, 'Category updated', 'Success', []);
+        }
     }
 
     /**
